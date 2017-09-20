@@ -1,0 +1,51 @@
+.contactPage {
+    background: linear-gradient(#8e7161, #755361);
+    overflow-y: auto;
+}
+
+.contactContent {
+    width: 90%;
+    text-align: center;
+}
+
+.contactLogo {
+    width: 20%;
+    min-width: 200px;
+    position: relative;
+    left: 3%; /* visually center the logo */
+    margin-bottom: 60px;
+}
+
+.contactEmail {
+    margin-bottom: 60px;
+    color: white;
+    font-size: 20pt;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.contactLogoList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contactLogoList li {
+    display: inline;
+    margin: 0 20px;
+    filter: grayscale(1);
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    transition: all 200ms;
+}
+
+.contactLogoList li:hover {
+    filter: grayscale(0);
+    bottom: 10px;
+}
+
+.contactLogoList img {
+    width: 6%;
+    min-width: 70px
+}

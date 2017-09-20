@@ -1,0 +1,219 @@
+#contactSlide {
+  border-bottom: 10px solid white;
+  display: none;
+}
+
+#contactContainer {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+#leftContact {
+  width: 50%;
+  height: 100%;
+  border-right: 5px solid white;
+}
+
+#rightContact {
+  width: 50%;
+  height: 100%;
+  border-left: 5px solid white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#hoursContainer, #phoneEmail, #social {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #727272, #515151); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #727272, #515151); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #727272, #515151); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #727272, #515151);
+}
+
+#hoursContainer {
+  width: 100%;
+  height: 80%;
+  border-bottom: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hoursHeader {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #4c4c4c, #393939); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #4c4c4c, #393939); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #4c4c4c, #393939); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #4c4c4c, #393939);
+  width: 100%;
+}
+
+#hoursHeader h2 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+
+#hoursHeader h2 i {
+  margin-right: 10px;
+}
+
+#hours {
+  width: 100%;
+  height: 80%;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+#contactInfo {
+  width: 100%;
+  height: 20%;
+  border-top: 5px solid white;
+  display: flex;
+}
+
+#phoneEmail {
+  width: 80%;
+  height: 100%;
+  border-right: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#phoneEmail i {
+  margin-right: 10px;
+}
+
+#email i {
+  color: white;
+  transition: color 0.15s;
+}
+
+#email:hover i {
+  color: #fff084;
+}
+
+#contactPar {
+  text-align: center;
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  color: white;
+}
+
+#contactPar p {
+  margin: 0;
+}
+
+#social {
+  width: 20%;
+  height: 100%;
+  border-left: 5px solid white;
+  background: linear-gradient(#3D62B3, #335795);
+  transition: background 2s;
+}
+
+#social:hover {
+  background: linear-gradient(#335795, #3D62B3);  
+}
+
+#social p {
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  position: relative;
+  top: 15px;
+}
+
+table {
+	width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+	height: 100%;
+  padding: 20px;
+  padding-bottom: 30px;  
+}
+
+td {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.day {
+	text-align: right;
+}
+
+.time {
+	text-align: left;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  #contactSlide {
+    border-top: 0;
+  }
+
+  #contactContainer {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  #leftContact {
+    width: 100%;
+    height: 50%;
+    border-right: 0;
+    border-bottom: 5px solid white;
+  }
+
+  #rightContact {
+    width: 100%;
+    height: 50%;
+    border-left: 0;
+    border-top: 5px solid white;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  #contactPar {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  #hours td {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+
+  #hoursHeader h2 {
+    font-size: 18px;
+  }
+
+}
