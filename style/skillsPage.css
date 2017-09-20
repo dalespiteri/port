@@ -83,16 +83,10 @@
 }
 
 .skill-box {
-    width: 50%;
+    width: 50%; 
     height: 350px;
     position: relative;
     margin: 0 40px;
-}
-
-@keyframes skill-flip { /* make the box appear to spin around */
-    0% {transform: scaleX(1) skewX(0);}
-    50% {transform: scaleX(0) skewX(45deg);}
-    100% {transform: scaleX(1) skewX(0);}
 }
 
 .skill-flip { /* add class for when a skill link is clicked */
