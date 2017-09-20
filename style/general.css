@@ -302,6 +302,7 @@ button {
     .navBar,
     .navBarLeft,
     .navBarRight {
+        background-color: rgba(255,255,255,0.97); /* give the user a slight sense of the page they're on while in full screen navigation */
         width: 100%;
         left: 100%;
     }

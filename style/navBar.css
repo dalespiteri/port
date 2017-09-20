@@ -1,6 +1,6 @@
 .navBar {
     height: 100%;
-    background-color: white;
+    background-color: black;
     position: absolute;
     display: flex;
     align-items: center;
@@ -9,17 +9,17 @@
     transition: all 600ms;
 }
 
-.navBarLeft {
-    width: 25%;
+.navBarLeft { /* addClass for the navigation animation */
+    width: 25%; 
     left: 0;
 }
 
-.navBarRight {
+.navBarRight { /* addClass for the navigation animation */
     left: 75%;
     width: 25%;
 }
 
-.navBarFront {
+.navBarFront { /* navigation style for front page */
     left: 50%;
     width: 50%;
 }
@@ -43,21 +43,22 @@
     border-radius: 40px;
     cursor: pointer;
     transition: all 150ms;
-    position: relative;
-    left: 0;
+    position: relative; /* 0 out position for hover transition */
     bottom: 0;
 }
 
 .navListLink:hover {
     bottom: 2px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.35);
+    transform: scale(1.005);
+    /* combination gives a raised effect */
 }
 
 .navLinkActive {
     color: white;
     border: 0;
-    pointer-events: none;
-    box-shadow: 0 0 0 black;
+    pointer-events: none; /* blocks the navigation link when the associated page is active */
+    box-shadow: 0 0 0 black; /* 0 out the shadow */
 }
 
 .aboutLinkActive {

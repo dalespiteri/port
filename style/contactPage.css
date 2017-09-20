@@ -4,15 +4,15 @@
 }
 
 .contactContent {
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
 .contactLogo {
-    width: 20%;
+    width: 17%;
     min-width: 200px;
     position: relative;
-    left: 3%; /* visually center the logo */
+    left: 2%; /* visually center the logo */
     margin-bottom: 60px;
 }
 
@@ -31,21 +31,20 @@
 }
 
 .contactLogoList li {
-    display: inline;
+    display: inline; /* change the list to horizontal layout */
     margin: 0 20px;
-    filter: grayscale(1);
     cursor: pointer;
-    position: relative;
-    bottom: 0;
-    transition: all 200ms;
-}
-
-.contactLogoList li:hover {
-    filter: grayscale(0);
-    bottom: 10px;
 }
 
 .contactLogoList img {
     width: 6%;
-    min-width: 70px
+    min-width: 70px;
+    transform: translateY(0);
+    filter: grayscale(1);
+    transition: all 200ms;
+}
+
+.contactLogoList img:hover {
+    transform: translateY(-10px);
+    filter: grayscale(0);
 }
