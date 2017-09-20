@@ -474,3 +474,13 @@ button {
         min-width: 0; /* 0 out previous rule */
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .webpageInfo h2 { /* hide headers on xs mobile devices */
+        display: none;
+    }
+    .webpageInfo { /* center full site link on xs mobile devices */
+        justify-content: center;
+        align-items: center;
+    }
+}

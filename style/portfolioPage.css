@@ -21,7 +21,7 @@
     transform: perspective(1300px) rotateX(-20deg);
 }
 
-@media only screen and (min-width: 601px) { /* avoid hover effect on mobile devices */
+@media only screen and (min-width: 768px) { /* avoid hover effect on mobile devices */
 
     .webpage:hover {
         width: 60%;
@@ -62,12 +62,11 @@
     transition: 500ms;
 }
 
-@media only screen and (min-width: 400px) { /* removing hover effects on xs mobile devices */
-    .webpageHover:hover {
-        opacity: 1;
-        transition-delay: 250ms;
-    }
+.webpageHover:hover {
+    opacity: 1;
+    transition-delay: 250ms;
 }
+
 
 .webpageInfo { /* the information that slides in on hover */
     background-color: rgba(0, 0, 0, 0.8);
@@ -78,12 +77,10 @@
     right: 75%; /* move it almost entirely offscreen but keep a little visible so when the opacity transition happens it's a little more visible - less jarring */
 }
 
-@media only screen and (min-width: 400px) { /* removing hover effects on xs mobile devices */
-    .webpageHover:hover .webpageInfo {
-        right: 0;
-        transition: 750ms;
-        transition-delay: 250ms;
-    }
+.webpageHover:hover .webpageInfo {
+    right: 0;
+    transition: 750ms;
+    transition-delay: 250ms;
 }
 
 .fullSiteLink {
