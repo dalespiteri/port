@@ -14,16 +14,21 @@
 
 /* general rules */
 
-*::-webkit-scrollbar {
-    /* nicer scroll bars for all */
-    width: 10px;
-    height: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
+@media only screen and (min-width: 768px) {
+/* remove scroll bar visuals on mobile devices */
 
-*::-webkit-scrollbar-thumb {
-    /* nicer scroll thumbs for all */
-    background: rgba(0, 0, 0, 0.5);
+    *::-webkit-scrollbar {
+        /* nicer scroll bars for all */
+        width: 10px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        /* nicer scroll thumbs for all */
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
 }
 
 body {
@@ -37,6 +42,7 @@ h1 {
     font-size: 8em;
     text-align: center;
     text-shadow: 5px 5px #021116;
+    margin-bottom: 100px;
 }
 
 h2 {
@@ -58,7 +64,7 @@ button {
 
 /* animations */
 
-@keyframes logoSpin {
+@keyframes logoSpin { /* animation to make a cranked up 2D spin */
     0% {
         transform: rotate(0deg);
     }
@@ -70,19 +76,19 @@ button {
     }
 }
 
-@keyframes skillSpin {
+@keyframes skill-flip { /* horizontal 3d flip */
     0% {
-        transform: scaleX(1) rotate(0deg);
+        transform: scaleX(1) skewX(0);
     }
     50% {
-        transform: scaleX(0) rotate(180deg);
+        transform: scaleX(0) skewX(45deg);
     }
     100% {
-        transform: scaleX(1) rotate(360deg);
+        transform: scaleX(1) skewX(0);
     }
 }
 
-@keyframes moveRight {
+@keyframes moveRight { /* animation for page slide-ins from the left */
     from {
         transform: translateX(-100%);
     }
@@ -91,7 +97,7 @@ button {
     }
 }
 
-@keyframes moveLeft {
+@keyframes moveLeft { /* animation for page slide-ins from the right */
     from {
         transform: translateX(100%);
     }
@@ -126,7 +132,7 @@ button {
 .middle-bar {
     top: 50%;
     transform: translateY(-50%) rotate(0);
-    /* center the bar, and set a rotate value of 0 for the transition for the on click animation */
+    /* center the bar, and set a rotate value of 0 for the transition for the on click animation to form an X */
 }
 
 .bottom-bar {
@@ -135,28 +141,28 @@ button {
 
 .menu-bar-gone {
     opacity: 0;
-    /* remove top and bottom bars to make the x on click */
+    /* addClass to remove top and bottom bars to make the x on click */
 }
 
 .nav-x-one {
-    /* nav-x-one and two control the middle bars to form the X on click */
+    /* nav-x-one and nav-x-two control the middle bars to form the X on click */
     transform: translateY(-50%) rotate(45deg);
-    background-color: #021116;
+    background-color: #021116; /* change the color to appear on the white menu BG */
 }
 
-.nav-x-two {
+.nav-x-two { /* see nav-x-one for details */
     transform: translateY(-50%) rotate(-45deg);
     background-color: #021116;
 }
 
-.container {
+.container { /* contain the page to the screen and hide all other content outside for page slides */
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: relative; /* elements inside use absolute positioning */
     overflow: hidden;
 }
 
-.pages {
+.pages { /* houses all the separate pages */
     width: 100%;
     height: 100%;
     position: relative;
@@ -165,18 +171,18 @@ button {
 .page {
     width: 75%;
     height: 100%;
-    position: absolute;
+    position: absolute; /* stack all the pages on top of eachother */
     top: 0;
     z-index: 1;
 }
 
 .content {
     /* general rule for page margins */
-    margin: 100px auto;
+    margin: 100px auto; /* make sure all pages have 100px of dead space at the top and bottom */
 }
 
 .centeredColumn {
-    /* reusable CSS for multiple elements that use a centered column structure throughout the page */
+    /* reusable CSS for multiple elements that use a centered column structure throughout the site */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,57 +190,15 @@ button {
 }
 
 
-/* Header border hover effect */
-
-.header-one-div {
-    margin-bottom: 100px;
-    position: relative;
-    /* Make h1's width determined by their content, and center them on the page */
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.header-border-one {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 0%;
-    border-left: 0px solid white;
-    border-bottom: 0px solid white;
-    transition: all 300ms;
-    transition-delay: 300ms;
-}
-
-.header-border-two {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0%;
-    height: 0%;
-    border-right: 0px solid white;
-    border-top: 0px solid white;
-    transition: all 300ms;
-}
-
-.header-one-div:hover .header-border-one,
-.header-one-div:hover .header-border-two {
-    width: 100%;
-    height: 100%;
-    border-width: 1px;
-}
-
-
 /* add classes for jQuery use */
 
 .topPage {
-    /* insures the selected page moves to the top */
+    /* the page that slides in is always the topmost page */
     z-index: 3;
 }
 
 .subTopPage {
-    /* insures the previously active page stays visible during the new page animation */
+    /* the page currently viewed is always above all other pages except the page sliding in */
     z-index: 2;
 }
 
@@ -272,8 +236,7 @@ button {
 
 @media only screen and (max-height: 500px) {
     .centeredColumn {
-        justify-content: flex-start;
-        overflow-y: auto;
+        justify-content: flex-start; /* remove flex centering vertically of pages where the content is larger than the screen dimensions to prevent content from being pushed out of page limits */
     }
 }
 
@@ -296,7 +259,7 @@ button {
         text-shadow: 4px 4px #021116;
     }
     .page {
-        width: 100%;
+        width: 100%; /* pages now take up the entire screen */
     }
     /* nav bar MQs*/
     .navBar,
@@ -304,9 +267,9 @@ button {
     .navBarRight {
         background-color: rgba(255,255,255,0.97); /* give the user a slight sense of the page they're on while in full screen navigation */
         width: 100%;
-        left: 100%;
+        left: 100%; /* move navigation off screen and have the pages take the entire view width */
     }
-    .nav-bar-full {
+    .nav-bar-full { /* addClass for when the navigation menu is selected to move back on screen */
         left: 0;
     }
     .pageRightPre {
@@ -314,10 +277,10 @@ button {
         animation-name: moveRight;
     }
     .nav-menu-toggle {
-        visibility: visible;
+        visibility: visible; /* make the hamburger menu button visible */
     }
     /* front page MQs */
-    .frontPage {
+    .frontPage { /* requires a separate class than other pages to adjust to the full screen layout */
         width: 100%;
     }
     /* skill MQs */
@@ -325,14 +288,14 @@ button {
         font-size: 1.25em; /* prevents the list from changing to two lines before breaking at mobile MQs mark */
     }
     .left-arrow,
-    .right-arrow {
+    .right-arrow { /* remove selection arrows on smaller devices */
         display: none;
     }
     .skill-box {
-        width: 75%;
+        width: 75%; /* with no selection arrows, the box can now be larger */
     }
     .skill-descriptions {
-        width: 80%;
+        width: 75%; /* match paragraph dimensions to the skill box */
     }
     /* portfolio MQs */
     .webpageInfo {
@@ -351,10 +314,10 @@ button {
     h1 {
         font-size: 2.75em;
         text-shadow: 2px 2x #021116;
+        margin-bottom: 75px;
     }
-    .header-one-div {
-        margin-bottom: 20px;
-        padding: 20px;
+    .content {
+        margin: 75px auto; /* less dead space on smaller devices */
     }
     /* front page MQs */
     .frontContent {
@@ -371,25 +334,28 @@ button {
         font-size: 1.25em;
     }
     .skill-item {
-        display: block;
+        display: block; /* go back to vertically list layout */
         width: 50%;
         min-width: 200px;
-        margin: auto;
+        margin: auto; /* center menu */
         padding: 10px;
     }
     .skillsPage li:nth-child(even) {
+        /* remove side border dividers in new layout */
         border-left: 0;
         border-right: 0;
     }
     .skillsPage li {
+        /* dividers now on bottom */
         border-bottom: 2px solid white;
     }
     .skillsPage li:last-child {
+        /* remove unecessary dividers on last list item */
         border: 0;
     }
     
     .skill-box {
-        width: 80%;
+        width: 85%;
         margin: 0;
     }
     .skill-row {
@@ -413,32 +379,31 @@ button {
     .skill-pic {
         width: 100%;
     }
-    
-    /* Images 1, 4, and 5 have different dimensions and look better not expanding past the boundaries - n+4 selects the 4th skill container and beyond and alters only their max height */
     .skill-container:first-child .skill-pic img {
+        /* Images 1, 4, and 5 have different dimensions and look better not expanding past the boundaries */
         max-height: 75%;
     }
     .skill-container:nth-child(n+4) .skill-pic img {
+        /*  n+4 selects the 4th skill container and beyond and alters only their max height */
         max-height: 75%;
     }
-        
     .skill-descriptions {
+        /* fill mobile devices width more fully */
         width: 100%;
         padding: 0 20px;
     }
     .skill-paragraph {
         font-size: 1em;
-        text-indent: 0;
     }
     /* portfolio MQs */
     .webpage {
         width: 100%;
-        min-width: 0;
-        border: 0;
-        box-shadow: 0 0 0;
-        transform: perspective(0) rotateX(0);
-        border-top: 10px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 10px solid rgba(255, 255, 255, 0.5);
+        min-width: 0; /* 0 out previous rule */
+        border: 0; /* 0 out previous rule */
+        box-shadow: 0 0 0; /* 0 out previous rule */
+        transform: perspective(0) rotateX(0); /* 0 out previous rule */
+        border-top: 5px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 5px solid rgba(255, 255, 255, 0.5);
     }
     .lanParty {
         margin: 30px 0;
@@ -446,13 +411,13 @@ button {
     .webpageInfo h2 {
         font-size: 1.75em;
     }
-    .webpageInfo p {
+    .webpageInfo p { /* less room so remove descriptions */
         display: none;
     }
     /* about page MQs */
     .aboutContent {
         width: 100%;
-        min-width: 0;
+        min-width: 0; /* 0 out previous rule */
         padding: 0 20px;
     }
     .about-text p {
@@ -463,25 +428,25 @@ button {
     }
     .outter-bubble {
         width: 100%;
-        margin: 0;
+        margin: 0; /* 0 out previous rule */
     }
     .about-section-one {
-        flex-direction: column-reverse;
-        margin: 0;
+        flex-direction: column-reverse; /* move to a vertically layout */
+        margin: 0; /* 0 out previous rule */
     }
     .about-section-two {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* move to a vertical layout */
+        align-items: center; 
     }
     .about-p {
         width: 100%;
     }
     .about-image {
-        width: 50%;
+        width: 40%;
         margin: 30px 0;
     }
     .outter-bubble:last-child {
-        margin-top: 30px;
+        margin-top: 30px; /* match margin on face images between text boxes */
     }
     .about-section-one p:after,
     .about-section-one p:before,
@@ -489,6 +454,7 @@ button {
     .about-section-two p:before,
     .outter-bubble:before,
     .bubble-connector {
+        /* remove all speech bubble arrows */
         display: none;
     }
     /* contact page MQs*/
@@ -497,7 +463,7 @@ button {
         margin-bottom: 40px;
     }
     .contactEmail {
-        font-size: 12pt;
+        font-size: 1em;
         margin-bottom: 40px;
     }
     .contactLogoList li {
@@ -505,6 +471,6 @@ button {
     }
     .contactLogoList img {
         width: 40px;
-        min-width: 0;
+        min-width: 0; /* 0 out previous rule */
     }
 }
