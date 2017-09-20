@@ -11,11 +11,9 @@ $('.portfolioContent').hover(
         
     },
     function () {
-        setTimeout(function () {
+        
             $('.lanParty').removeClass('lanHover');
             
-            // remove the hover class, but add timeout of 300ms to delay the removal in case of accidental mouse movements outside the page
-            
-        }, 300);
+            // remove the hover class
     }
 );
