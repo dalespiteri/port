@@ -1,6 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Dale Spiteri</title>
@@ -20,6 +19,7 @@
 <body>
     <div class="container">
         <div class="nav-menu-toggle">
+        <!-- hamburger menu hidden on larger devices -->
             <div class="menu-bar top-bar"></div>
             <div class="menu-bar middle-bar"></div>
             <div class="menu-bar middle-bar"></div>
@@ -34,6 +34,7 @@
             </ul>
         </div>
         <div class="pages">
+        <!-- contains all navigatable pages -->
             <div class="subTopPage pageLeft frontPage centeredColumn">
                 <div class="frontContent content">
                     <div class="pixelLogo">
@@ -57,18 +58,20 @@
                         </ul>
                     </div>
                     <div class="skill-box-container">
-                        <div class="left-arrow"></div>    
+                        <div class="left-arrow"></div>
+                        <!-- arrow styled in CSS -->
                         <div class="skill-box">
                             <div class="skill-container html-skill-container skill-row">
                                 <div class="skill-text">
                                     <div>
                                         <h3>&lt;<span>html</span>&gt;</h3>
+                                        <!-- span used for color highlights -->
                                         <p>the skeleton</p>
                                         <h3>&lt;/html&gt;</h3>
                                     </div>
                                 </div>
                                 <div class="skill-pic">
-                                    <img src="images/skull.svg" alt="skeleton" />
+                                    <img src="images/skull.svg" alt="cartoon skull" />
                                 </div>
                             </div>
                             <div class="skill-container css-skill-container">
@@ -80,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="skill-pic">
-                                    <img src="images/skin.png" alt="naked guy" />
+                                    <img src="images/skin.png" alt="cartoon naked guy" />
                                 </div>
                             </div>
                             <div class="skill-container jquery-skill-container">
@@ -92,7 +95,7 @@
                                     </div>
                                 </div>
                                 <div class="skill-pic">
-                                    <img src="images/muscles.png" alt="muscle man" />
+                                    <img src="images/muscles.png" alt="cartoon muscle man" />
                                 </div>
                             </div>
                             <div class="skill-container ps-skill-container">
@@ -113,9 +116,15 @@
                             </div>
                         </div>
                         <div class="right-arrow"></div>
+                        <!-- arrow stylized in CSS -->
                     </div>
                     <div class="skill-descriptions">
-                        <p class="skill-paragraph html-skill-description visible-skill-description">I actually first learned HTML as a kid. Making sites with friends using Geocities and Angelfire about videogames we used to play, I learned the basic building blocks of a webpage. It was a hobby for a couple years and it's amazing to see how much I had left unturned now that I am relearning it.</p>
+                    <!-- paragraphs with no display unless selected -->
+                        <p class="skill-paragraph html-skill-description visible-skill-description">
+                        <!-- visible skill by default -->
+                        I actually first learned HTML as a kid. Making sites with friends using Geocities and Angelfire about videogames we used to play, I learned the basic building blocks of a webpage. It was a hobby for a couple years and it's amazing to see how much I had left unturned now that I am relearning it.</p>
+                        
+                        <!-- hidden paragraphs -->
                         <p class="skill-paragraph css-skill-description">As someone who comes from a design background, CSS has been my favourite language so far to learn. The things you can do with it alone on top of very basic HTML structure is always a fun challenge for me. Seeing the introduction of Flex and Grids to CSS3 is something that fills me with confidence that I'll continue to enjoy learning the language as it develops and becomes more versatile.</p>
                         <p class="skill-paragraph css-skill-description">On top of CSS, I am currently learning to use preprocessors to streamline my workflow. SASS and LESS are current skills I am adding to my toolbox.</p>
                         <p class="skill-paragraph jquery-skill-description">jQuery is the most complicated language I have learned so far. This is actually why I love it. I enjoy challenges, and jQuery is a problem solver's dream. There is always a way to manipulate your page structure and style in fascinating ways, but at times, it takes a lot of creativity.</p>
@@ -124,6 +133,8 @@
                         <p class="skill-paragraph ps-skill-description">A website without images is just boring, but can also get fairly heavy. Working with large format images as a graphic designer has taught me a lot about compression and getting the most out of a small file size. This is very helpful in keeping graphic heavy sites light and fast on their feet.</p>
                         <p class="skill-paragraph ill-skill-description">Illustrator's vector software is second to none. It is ideal software for SVG file production, and iconography in web design. It keeps files small, and pixel perfect regardless of size.</p>
                         <p class="skill-paragraph ill-skill-description">On top of this, since starting web design, I've found Illustrator to be the ideal software for wire framing, and site planning. The way it uses shapes, layers, and colours offers much more versatility than Photoshop and make it much faster and user friendly for element design. Illustrator is by far my favourite tool in the Adobe tool kit and I have found it tremendously useful in my exploration of web design.</p>
+                        <!-- hidden paragraphs end -->
+                        
                     </div>
                 </div>
             </div>
@@ -131,7 +142,7 @@
                 <div class="portfolioContent content">
                     <h1>Portfolio</h1>
                     <div class="webpage bobsBurgers">
-                        <img src="images/bobsBurgers.jpg" alt="bobs burgers webpage" />
+                        <img src="images/bobsBurgers.jpg" alt="bob's burgers webpage" />
                         <div class="webpageHover">
                             <div class="webpageInfo">
                                 <h2>Bob's Burgers: Restaurant Site</h2>
@@ -141,7 +152,7 @@
                         </div>
                     </div>
                     <div class="webpage lanParty">
-                        <img src="images/lanParty.jpg" alt="lan party web page" />
+                        <img src="images/lanParty.jpg" alt="lan party podcast web page" />
                         <div class="webpageHover">
                             <div class="webpageInfo">
                                 <h2>The LAN Party: Podcast Site</h2>
@@ -168,6 +179,7 @@
                     <div class="about-text">
                         <p class="outter-bubble top-bubble">Hi, I’m Dale, and I’m a designer.</p>
                         <div class="bubble-connector"></div>
+                        <!-- bubble connecter is a white div to connect the surrounding divs by a line -->
                         <div class="about-section-one">
                             <div class="about-p"><p>I’ve spent the last ten years as a professional graphic designer. I love design, but working with a static canvas can start to feel a bit dull. I want to add functionality. What could suit a graphic designer looking to add function to form better than web design?</p></div>
                             <div class="about-image about-image-one"><img src="images/aboutHead.png" alt="charicature head" /></div>
@@ -177,6 +189,7 @@
                             <div class="about-p"><p>So I researched. I looked at post grad programs. I looked at boot camps. I looked at self teaching. I asked people in the field. Overwhelmingly, I was pushed to teach myself. Why? Because learning doesn’t stop. If you can’t teach yourself, you’ll eventually be phased out. So I did that. I taught myself to code. I’m still teaching myself to code. I’ll always be teaching myself because new and exciting tools will continue to be developed and at my disposal.</p></div>
                         </div>
                         <div class="bubble-connector"></div>
+                        <!-- bubble connecter is a white div to connect the surrounding divs by a line -->
                         <p class="outter-bubble">So now, I’m Dale, and I'm a web designer.</p>
                     </div>
                 </div>
