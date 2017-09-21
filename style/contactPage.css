@@ -13,15 +13,76 @@
     min-width: 200px;
     position: relative;
     left: 2%; /* visually center the logo */
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .contactEmail {
-    margin-bottom: 60px;
     color: white;
-    font-size: 20pt;
+    background-image: linear-gradient(transparent 50%, white 50%);
+    background-size: 200%;
+    background-position: top;
+    width: 420px;
+    font-size: 1.75em;
+    padding: 10px;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 3px black;
+    margin: 0 auto 70px auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.contactEmail:hover .top-border {
+    width: 100%;
+    border-width: 1px;
+    transition: all 150ms;
+}
+.contactEmail:hover .right-border {
+    height: 100%;
+    border-width: 1px;
+    transition: all 150ms;
+    transition-delay: 150ms;
+}
+.contactEmail:hover .bottom-border {
+    width: 100%;
+    border-width: 1px;
+    transition: all 150ms;
+    transition-delay: 300ms;
+}
+.contactEmail:hover .left-border {
+    height: 100%;
+    border-width: 1px;
+    transition: all 150ms;
+    transition-delay: 450ms;
+}
+.contactEmail:hover {
+    background-position: bottom;
+    color: #666;
+    transition: 150ms;
+    transition-delay: 600ms;
+}
+.border {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.top-border {
+    border-top: solid 1px white;
+    top: 0;
+    left: 0;
+}
+.right-border {
+    border-right: solid 1px white;
+    top: 0;
+    right: 0;
+}
+.bottom-border {
+    border-bottom: solid 1px white;
+    bottom: 0;
+    right: 0;
+}
+.left-border {
+    border-left: solid 1px white;
+    left: 0;
+    bottom: 0;
 }
 
 .contactLogoList {
