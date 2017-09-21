@@ -11,24 +11,20 @@
     font-style: normal;
 }
 
-
 /* general rules */
 
 @media only screen and (min-width: 768px) {
-/* remove scroll bar visuals on mobile devices */
-
+    /* remove scroll bar visuals on mobile devices */
     *::-webkit-scrollbar {
         /* nicer scroll bars for all */
         width: 10px;
         height: 20px;
         background-color: rgba(255, 255, 255, 0.5);
     }
-
     *::-webkit-scrollbar-thumb {
         /* nicer scroll thumbs for all */
         background: rgba(0, 0, 0, 0.5);
     }
-    
 }
 
 body {
@@ -65,9 +61,11 @@ a {
     text-decoration: none;
 }
 
+
 /* animations */
 
-@keyframes logoSpin { /* animation to make a cranked up 2D spin */
+@keyframes logoSpin {
+    /* animation to make a cranked up 2D spin */
     0% {
         transform: rotate(0deg);
     }
@@ -79,7 +77,8 @@ a {
     }
 }
 
-@keyframes skill-flip { /* horizontal 3d flip */
+@keyframes skill-flip {
+    /* horizontal 3d flip */
     0% {
         transform: scaleX(1) skewX(0);
     }
@@ -91,7 +90,8 @@ a {
     }
 }
 
-@keyframes moveRight { /* animation for page slide-ins from the left */
+@keyframes moveRight {
+    /* animation for page slide-ins from the left */
     from {
         transform: translateX(-100%);
     }
@@ -100,7 +100,8 @@ a {
     }
 }
 
-@keyframes moveLeft { /* animation for page slide-ins from the right */
+@keyframes moveLeft {
+    /* animation for page slide-ins from the right */
     from {
         transform: translateX(100%);
     }
@@ -150,22 +151,27 @@ a {
 .nav-x-one {
     /* nav-x-one and nav-x-two control the middle bars to form the X on click */
     transform: translateY(-50%) rotate(45deg);
-    background-color: #021116; /* change the color to appear on the white menu BG */
+    background-color: #021116;
+    /* change the color to appear on the white menu BG */
 }
 
-.nav-x-two { /* see nav-x-one for details */
+.nav-x-two {
+    /* see nav-x-one for details */
     transform: translateY(-50%) rotate(-45deg);
     background-color: #021116;
 }
 
-.container { /* contain the page to the screen and hide all other content outside for page slides */
+.container {
+    /* contain the page to the screen and hide all other content outside for page slides */
     width: 100%;
     height: 100vh;
-    position: relative; /* elements inside use absolute positioning */
+    position: relative;
+    /* elements inside use absolute positioning */
     overflow: hidden;
 }
 
-.pages { /* houses all the separate pages */
+.pages {
+    /* houses all the separate pages */
     width: 100%;
     height: 100%;
     position: relative;
@@ -174,14 +180,16 @@ a {
 .page {
     width: 75%;
     height: 100%;
-    position: absolute; /* stack all the pages on top of eachother */
+    position: absolute;
+    /* stack all the pages on top of eachother */
     top: 0;
     z-index: 1;
 }
 
 .content {
     /* general rule for page margins */
-    margin: 100px auto; /* make sure all pages have 100px of dead space at the top and bottom */
+    margin: 100px auto;
+    /* make sure all pages have 100px of dead space at the top and bottom */
 }
 
 .centeredColumn {
@@ -239,11 +247,13 @@ a {
 
 @media only screen and (max-height: 500px) {
     .centeredColumn {
-        justify-content: flex-start; /* remove flex centering vertically of pages where the content is larger than the screen dimensions to prevent content from being pushed out of page limits */
+        justify-content: flex-start;
+        /* remove flex centering vertically of pages where the content is larger than the screen dimensions to prevent content from being pushed out of page limits */
     }
 }
 
-@media only screen and (max-height: 550px) { /* just in case the navigation menu won't fit vertically on the screen*/
+@media only screen and (max-height: 550px) {
+    /* just in case the navigation menu won't fit vertically on the screen*/
     .navBar {
         align-items: flex-start;
         overflow-y: auto;
@@ -252,6 +262,7 @@ a {
         margin: 100px 0;
     }
 }
+
 
 /* MQs for transition to medium sized devices and monitors */
 
@@ -262,17 +273,21 @@ a {
         text-shadow: 4px 4px #021116;
     }
     .page {
-        width: 100%; /* pages now take up the entire screen */
+        width: 100%;
+        /* pages now take up the entire screen */
     }
     /* nav bar MQs*/
     .navBar,
     .navBarLeft,
     .navBarRight {
-        background-color: rgba(255,255,255,0.97); /* give the user a slight sense of the page they're on while in full screen navigation */
+        background-color: rgba(255, 255, 255, 0.97);
+        /* give the user a slight sense of the page they're on while in full screen navigation */
         width: 100%;
-        left: 100%; /* move navigation off screen and have the pages take the entire view width */
+        left: 100%;
+        /* move navigation off screen and have the pages take the entire view width */
     }
-    .nav-bar-full { /* addClass for when the navigation menu is selected to move back on screen */
+    .nav-bar-full {
+        /* addClass for when the navigation menu is selected to move back on screen */
         left: 0;
     }
     .pageRightPre {
@@ -280,25 +295,31 @@ a {
         animation-name: moveRight;
     }
     .nav-menu-toggle {
-        visibility: visible; /* make the hamburger menu button visible */
+        visibility: visible;
+        /* make the hamburger menu button visible */
     }
     /* front page MQs */
-    .frontPage { /* requires a separate class than other pages to adjust to the full screen layout */
+    .frontPage {
+        /* requires a separate class than other pages to adjust to the full screen layout */
         width: 100%;
     }
     /* skill MQs */
     .skill-list ul {
-        font-size: 1.25em; /* prevents the list from changing to two lines before breaking at mobile MQs mark */
+        font-size: 1.25em;
+        /* prevents the list from changing to two lines before breaking at mobile MQs mark */
     }
     .left-arrow,
-    .right-arrow { /* remove selection arrows on smaller devices */
+    .right-arrow {
+        /* remove selection arrows on smaller devices */
         display: none;
     }
     .skill-box {
-        width: 75%; /* with no selection arrows, the box can now be larger */
+        width: 75%;
+        /* with no selection arrows, the box can now be larger */
     }
     .skill-descriptions {
-        width: 75%; /* match paragraph dimensions to the skill box */
+        width: 75%;
+        /* match paragraph dimensions to the skill box */
     }
     /* portfolio MQs */
     .webpageInfo {
@@ -310,6 +331,7 @@ a {
     }
 }
 
+
 /* MQs for transition to mobile devices */
 
 @media only screen and (max-width: 768px) {
@@ -320,7 +342,8 @@ a {
         margin-bottom: 75px;
     }
     .content {
-        margin: 75px auto; /* less dead space on smaller devices */
+        margin: 75px auto;
+        /* less dead space on smaller devices */
     }
     /* front page MQs */
     .frontContent {
@@ -337,10 +360,12 @@ a {
         font-size: 1.25em;
     }
     .skill-item {
-        display: block; /* go back to vertically list layout */
+        display: block;
+        /* go back to vertically list layout */
         width: 50%;
         min-width: 200px;
-        margin: auto; /* center menu */
+        margin: auto;
+        /* center menu */
         padding: 10px;
     }
     .skillsPage li:nth-child(even) {
@@ -356,7 +381,6 @@ a {
         /* remove unecessary dividers on last list item */
         border: 0;
     }
-    
     .skill-box {
         width: 85%;
         margin: 0;
@@ -401,10 +425,14 @@ a {
     /* portfolio MQs */
     .webpage {
         width: 100%;
-        min-width: 0; /* 0 out previous rule */
-        border: 0; /* 0 out previous rule */
-        box-shadow: 0 0 0; /* 0 out previous rule */
-        transform: perspective(0) rotateX(0); /* 0 out previous rule */
+        min-width: 0;
+        /* 0 out previous rule */
+        border: 0;
+        /* 0 out previous rule */
+        box-shadow: 0 0 0;
+        /* 0 out previous rule */
+        transform: perspective(0) rotateX(0);
+        /* 0 out previous rule */
         border-top: 5px solid rgba(255, 255, 255, 0.5);
         border-bottom: 5px solid rgba(255, 255, 255, 0.5);
     }
@@ -414,13 +442,15 @@ a {
     .webpageInfo h2 {
         font-size: 1.75em;
     }
-    .webpageInfo p { /* less room so remove descriptions */
+    .webpageInfo p {
+        /* less room so remove descriptions */
         display: none;
     }
     /* about page MQs */
     .aboutContent {
         width: 100%;
-        min-width: 0; /* 0 out previous rule */
+        min-width: 0;
+        /* 0 out previous rule */
         padding: 0 20px;
     }
     .about-text p {
@@ -431,15 +461,19 @@ a {
     }
     .outter-bubble {
         width: 100%;
-        margin: 0; /* 0 out previous rule */
+        margin: 0;
+        /* 0 out previous rule */
     }
     .about-section-one {
-        flex-direction: column-reverse; /* move to a vertically layout */
-        margin: 0; /* 0 out previous rule */
+        flex-direction: column-reverse;
+        /* move to a vertically layout */
+        margin: 0;
+        /* 0 out previous rule */
     }
     .about-section-two {
-        flex-direction: column; /* move to a vertical layout */
-        align-items: center; 
+        flex-direction: column;
+        /* move to a vertical layout */
+        align-items: center;
     }
     .about-p {
         width: 100%;
@@ -449,7 +483,8 @@ a {
         margin: 30px 0;
     }
     .outter-bubble:last-child {
-        margin-top: 30px; /* match margin on face images between text boxes */
+        margin-top: 30px;
+        /* match margin on face images between text boxes */
     }
     .about-section-one p:after,
     .about-section-one p:before,
@@ -474,15 +509,18 @@ a {
     }
     .contactLogoList img {
         width: 40px;
-        min-width: 0; /* 0 out previous rule */
+        min-width: 0;
+        /* 0 out previous rule */
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .webpageInfo h2 { /* hide headers on xs mobile devices */
+    .webpageInfo h2 {
+        /* hide headers on xs mobile devices */
         display: none;
     }
-    .webpageInfo { /* center full site link on xs mobile devices */
+    .webpageInfo {
+        /* center full site link on xs mobile devices */
         justify-content: center;
         align-items: center;
     }
