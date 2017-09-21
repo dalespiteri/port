@@ -75,12 +75,12 @@
     padding: 30px 40px;
     position: relative;
     right: 75%; /* move it almost entirely offscreen but keep a little visible so when the opacity transition happens it's a little more visible - less jarring */
+    transition: 750ms;
+    transition-delay: 250ms;
 }
 
 .webpageHover:hover .webpageInfo {
     right: 0;
-    transition: 750ms;
-    transition-delay: 250ms;
 }
 
 .fullSiteLink {
