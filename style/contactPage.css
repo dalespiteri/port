@@ -18,8 +18,12 @@
 
 .contactEmail {
     color: white;
+    background-image: transparent; /* for browsers that don't support gradients */
+    background-image: -webkit-linear-gradient(transparent 50%, white 50%);
+    background-image: -o-linear-gradient(transparent 50%, white 50%);
+    background-image: -moz-linear-gradient(transparent 50%, white 50%);
     background-image: linear-gradient(transparent 50%, white 50%);
-    background-size: 200%;
+    background-size: 100% 200%;
     background-position: top;
     width: 420px;
     font-size: 1.75em;
