@@ -83,10 +83,10 @@
 }
 
 .skill-box {
-    width: 50%; 
+    width: 600px; 
     height: 350px;
     position: relative;
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 .skill-flip { /* add class for when a skill link is clicked */
@@ -120,7 +120,7 @@
 
 .skill-text {
     width: 60%;
-    height: 80%; /* make this section slightly smaller than the section next to it */
+    height: 300px; /* make this section slightly smaller than the section next to it */
     background-color: white;
     display: flex;
     justify-content: center;
@@ -143,22 +143,24 @@
 }
 
 .skill-text img { /* for the images that replace the text on the illustrator and photoshop skills */
-    max-width: 80%; 
-    max-height: 80%;
+    height: 175px;
 }
 
 .skill-pic {
     width: 40%;
-    height: 90%; /* make the container slightly larger than the div next to it but leave room for images to spill out */
+    height: 325px; /* make the container slightly larger than the div next to it but leave room for images to spill out */
     background-color: #021116;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.skill-pic img {
+.skill-pic-skinny {
     max-height: 130%; /* spill images out */
-    max-width: 100%;
+}
+
+.skill-pic-fat {
+    width: 60%;
 }
 
 .skill-descriptions {

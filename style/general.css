@@ -328,10 +328,6 @@ a {
         /* remove selection arrows on smaller devices */
         display: none;
     }
-    .skill-box {
-        width: 75%;
-        /* with no selection arrows, the box can now be larger */
-    }
     .skill-descriptions {
         width: 75%;
         /* match paragraph dimensions to the skill box */
@@ -410,7 +406,7 @@ a {
     }
     .skill-text {
         width: 100%;
-        height: 100%;
+        height: 400px;
     }
     .skill-text h3 {
         font-size: 1em;
@@ -418,16 +414,18 @@ a {
     .skill-text p {
         font-size: 1em;
     }
+    .skill-text img {
+        height: 125px;
+    }
     .skill-pic {
         width: 100%;
+        height: 400px;
     }
-    .skill-container:first-child .skill-pic img {
-        /* Images 1, 4, and 5 have different dimensions and look better not expanding past the boundaries */
-        max-height: 75%;
+    .skill-pic-fat {
+        height: 100px;
     }
-    .skill-container:nth-child(n+4) .skill-pic img {
-        /*  n+4 selects the 4th skill container and beyond and alters only their max height */
-        max-height: 75%;
+    .skill-pic-skinny {
+        height: 150px;
     }
     .skill-descriptions {
         /* fill mobile devices width more fully */
