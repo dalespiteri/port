@@ -102,4 +102,8 @@ $('.nav-menu-toggle, .navListLink').click(function () {
 
     // this one rotates 45degrees in the opposite direction to form the second x line
 
-})
+});
+
+$('.nav-menu-toggle').click(function () {
+    $('.nav-menu-toggle').removeClass('nav-menu-attract');
+});

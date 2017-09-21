@@ -110,6 +110,14 @@ a {
     }
 }
 
+@keyframes menu-attract {
+    60% {
+        transform: scale(1.25);
+        box-shadow: 0px 8px 30px rgba(0,0,0,0.1);
+    }
+    to {transform: rotate(180deg);}
+}
+
 .nav-menu-toggle {
     width: 40px;
     height: 30px;
@@ -121,6 +129,13 @@ a {
     visibility: hidden;
     /* hide until the nav bar disappears on smaller screens */
     cursor: pointer;
+}
+
+.nav-menu-attract { /* an animation to attract attention on the front page to locate the menu */
+    animation-name: menu-attract;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.680, 0, 0.265, 1.550);
 }
 
 .menu-bar {
