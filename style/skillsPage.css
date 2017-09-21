@@ -22,7 +22,11 @@
     display: inline-block;
     margin: 0;
     padding: 5px 20px;
-    background: linear-gradient(transparent 50%, white 50%); /* half transparent background, half white so that when the active class is added the background appears to slide up */
+    background: transparent; /* for browsers that don't support gradients */
+    background: -webkit-linear-gradient(transparent 50%, white 50%);
+    background: -o-linear-gradient(transparent 50%, white 50%);
+    background: -moz-linear-gradient(transparent 50%, white 50%);
+    background: linear-gradient(transparent 50%, white 50%);/* half transparent background, half white so that when the active class is added the background appears to slide up */
     background-size: 200%;
     background-position: top;
     transition: all 250ms;
