@@ -30,59 +30,63 @@
     cursor: pointer;
 }
 
-.contactEmail:hover .top-border {
-    width: 100%;
-    border-width: 1px;
-    transition: all 150ms;
-}
-.contactEmail:hover .right-border {
-    height: 100%;
-    border-width: 1px;
-    transition: all 150ms;
-    transition-delay: 150ms;
-}
-.contactEmail:hover .bottom-border {
-    width: 100%;
-    border-width: 1px;
-    transition: all 150ms;
-    transition-delay: 300ms;
-}
-.contactEmail:hover .left-border {
-    height: 100%;
-    border-width: 1px;
-    transition: all 150ms;
-    transition-delay: 450ms;
-}
-.contactEmail:hover {
-    background-position: bottom;
-    color: #666;
-    transition: 150ms;
-    transition-delay: 600ms;
-}
-.border {
-    width: 0;
-    height: 0;
-    position: absolute;
-}
-.top-border {
-    border-top: solid 1px white;
-    top: 0;
-    left: 0;
-}
-.right-border {
-    border-right: solid 1px white;
-    top: 0;
-    right: 0;
-}
-.bottom-border {
-    border-bottom: solid 1px white;
-    bottom: 0;
-    right: 0;
-}
-.left-border {
-    border-left: solid 1px white;
-    left: 0;
-    bottom: 0;
+@media only screen and (min-width: 768px) { /* avoid hover effects on mobile */
+    
+    .contactEmail:hover .top-border {
+        width: 100%;
+        border-width: 1px;
+        transition: all 150ms;
+    }
+    .contactEmail:hover .right-border {
+        height: 100%;
+        border-width: 1px;
+        transition: all 150ms;
+        transition-delay: 150ms;
+    }
+    .contactEmail:hover .bottom-border {
+        width: 100%;
+        border-width: 1px;
+        transition: all 150ms;
+        transition-delay: 300ms;
+    }
+    .contactEmail:hover .left-border {
+        height: 100%;
+        border-width: 1px;
+        transition: all 150ms;
+        transition-delay: 450ms;
+    }
+    .contactEmail:hover {
+        background-position: bottom;
+        color: #666;
+        transition: 150ms;
+        transition-delay: 600ms;
+    }
+    .border {
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+    .top-border {
+        border-top: solid 1px white;
+        top: 0;
+        left: 0;
+    }
+    .right-border {
+        border-right: solid 1px white;
+        top: 0;
+        right: 0;
+    }
+    .bottom-border {
+        border-bottom: solid 1px white;
+        bottom: 0;
+        right: 0;
+    }
+    .left-border {
+        border-left: solid 1px white;
+        left: 0;
+        bottom: 0;
+    }
+    
 }
 
 .contactLogoList {

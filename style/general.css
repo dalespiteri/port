@@ -518,6 +518,7 @@ a {
     .contactEmail {
         font-size: 1em;
         margin-bottom: 40px;
+        width: auto; /* remove the width used to create the drawn border effect on larger screens */
     }
     .contactLogoList li {
         margin: 0 10px;
