@@ -3,7 +3,7 @@
     overflow-y: auto; /* pages have hidden overflow by default - override */
 }
 
-.aboutContent {
+.about-content {
     width: 80%;
     max-width: 900px;
     min-width: 550px; /* maintain legibility of copy but break before 600px media queries */

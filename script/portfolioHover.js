@@ -1,6 +1,6 @@
 // hover effects on the portfolio page
 
-$('.portfolioContent').hover(
+$('.portfolio-content').hover(
     
     // have the whole page trigger the hover effects
     

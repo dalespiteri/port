@@ -33,12 +33,13 @@ body {
 }
 
 h1 {
-    font-family: 'kittenswash-black', sans-serif;
+    font-family: 'Sacramento', sans-serif;
     color: white;
     font-size: 8em;
     text-align: center;
-    text-shadow: 5px 5px #021116;
+    font-weight: 100;
     margin-bottom: 100px;
+    text-transform: lowercase;
 }
 
 h2 {
@@ -116,6 +117,25 @@ a {
         box-shadow: 0px 8px 30px rgba(0,0,0,0.1);
     }
     to {transform: rotate(180deg);}
+}
+
+@keyframes bounce {
+    30%, 75%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    0% {
+        transform: translateY(-400px);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: translateY(-120px);
+        animation-timing-function: ease-in;
+    }
+    90% {
+        transform: translateY(-50px);
+        animation-timing-function:ease-in;
+    }
 }
 
 .nav-menu-toggle {
@@ -254,6 +274,9 @@ a {
     right: 0;
 }
 
+.h1-bounce {
+
+}
 
 /* MEDIA QUERIES */
 
@@ -460,7 +483,7 @@ a {
         display: none;
     }
     /* about page MQs */
-    .aboutContent {
+    .about-content {
         width: 100%;
         min-width: 0;
         /* 0 out previous rule */

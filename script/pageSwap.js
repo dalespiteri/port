@@ -105,5 +105,24 @@ $('.nav-menu-toggle, .navListLink').click(function () {
 });
 
 $('.nav-menu-toggle').click(function () {
+    
+    // once the menu has acknowledged by the user, remove the animation
+    
     $('.nav-menu-toggle').removeClass('nav-menu-attract');
+});
+
+$('.navListLink').click(function() {
+    $('.content h1').removeClass('h1-bounce');
+})
+
+$('.skillsLink').click(function() {
+    $('.skills-content h1').addClass('h1-bounce');
+});
+
+$('.portfolioLink').click(function() {
+    $('.portfolio-content h1').addClass('h1-bounce');
+});
+
+$('.aboutLink').click(function() {
+    $('.about-content h1').addClass('h1-bounce');
 });
