@@ -36,6 +36,27 @@
     color: #666666;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    /*
+    
+    IE doesn't handle transitions based off LEFT so when using IE I'm using transform: translateX instead
+    
+    The draw back here, and why I don't just use this for other browsers as well is that off the first transition from navBarFront to navBarLeft, using translate leaves a gap in the animation of the two panels uncovering the underlying site that should be hidden. Using left instead of translateX fixes this problem, but unfortunately isn't compatible with IE 
+    
+    */
+    
+    .navBarFront {
+        transform: translateX(100%);
+        left: 0;
+        width: 50%;
+}    
+    .navBarRight {
+        left: 0;
+        transform: translateX(300%);
+    }
+}
+
 .navListLink {
     box-shadow: 0 2px 5px rgba(0,0,0,0.35);
     margin: 25px 0;
