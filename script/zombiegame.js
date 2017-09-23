@@ -25,6 +25,14 @@ else if (shirt === "green" | shirt === "T-shirt" | shirt === "tshirt" | shirt ==
   alert("Which you realize is ironic as you look down at your chest.");
 } 
 
+else if (shirt == null | shirt === "") {
+  var shirt = "ugly naked body";
+  alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
+  alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
+  alert("You're naked. Congratulations.");
+  alert("Idiot.");
+}
+
 else {
   var shirt = "ugly naked body";
   alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
