@@ -212,7 +212,7 @@ var attackThree = Math.round(Math.random() * 3);
     alert("You're dead.");
     location.reload();
   } else {
-    if (derekGone != true) {
+    if (derekGone !== true) {
       alert("Derek doesn't make it.");
       alert("He's been bitten.");
       alert("Using the time Derek's death has brought you, you finish the zombie with your " + weapon + ".");
@@ -267,7 +267,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
         alert("A giant television bursts out of the roof of the stone building high into the air.");
         alert("The movie begins to play.");
         alert("Zombies begin to swarm the island...");
-        alert("You threateningly brandish your " + weapon + ".");
+        alert("You're sure this is how you'll die.");
         alert("Oddly enough, they don't attack you...");
         alert("They just pass and stare at the giant screen... transfixed by the magical world crafted by J.K. Rowling.");
         alert("You've saved the world.")
