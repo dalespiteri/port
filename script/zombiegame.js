@@ -6,7 +6,7 @@ var shirt = prompt("There are three shirts on the bed. A red checkered lumberjac
 
 if (shirt === "red" | shirt === "lumberjack" | shirt === "red lumberjack" | shirt === "red shirt") {
   var shirt = "red lumberjack shirt";
-  alert("You look pretty stupid in that" + " " + shirt + " " + "shirt. I mean it's the zombie apocolypse and you decided to where the brightest colour you could find. Solid choice.");
+  alert("You look pretty stupid in that" + " " + shirt + ". I mean it's the zombie apocolypse and you decided to where the brightest colour you could find. Solid choice.");
   alert("P.S. Have you never watched Star Trek? Who chooses a red shirt when starting an adventure?");
   alert("Have fun dying.");
 } 
@@ -207,7 +207,7 @@ var attackThree = Math.round(Math.random() * 3);
     if (derekGone != true) {
       alert("Derek doesn't make it.");
       alert("He's been bitten.");
-      alert("Using the time Derek's death has brought you, you finish the zombie with " + weapon + ".");
+      alert("Using the time Derek's death has brought you, you finish the zombie with your " + weapon + ".");
       alert("You bend over to comfort Derek.");
       alert("He asks what that thing was.");
       alert("Apparently he didn't even realize the apolcalypse was taking place.");
@@ -322,6 +322,9 @@ if (direction === "north" | direction === "go north" | direction === "north path
   if (attackHome === 1) {
     alert("You kill the zombie with your " + weapon + ".");
     alert("Another one attacks you!");
+    alert("You kill this one as well. Two more jump you. Three more.");
+    alert("You can't take it. There are too many!");
+    alert("You die.");
   } else {
     alert("You're overwhelmed!");
     alert("You die.")
