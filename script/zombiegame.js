@@ -1,7 +1,7 @@
 alert("It's the end of the world. Well... not exactly.");
 alert("You're still here, but so are the hordes of zombies that roam the planet and outnumber people like you ten million to one.");
 alert("It's been months since you last saw another person. You think about this as you sit in the little cottage you've holed up in for the last year and you're trying to figure out what to wear today.");
-alert("It's an odd task considering the circumstances, but it's nice to keep some semblance of normality in this fucked up time.")
+alert("It's an odd task considering the circumstances, but it's nice to keep some semblance of normality in this messed up time.")
 var shirt = prompt("There are three shirts on the bed. A red checkered lumberjack fleece, a blue button up oxford cotton, and a green T-shirt that reads 'I'm with stupid' and has an arrow that points up. What colour do you pick?").toLowerCase();
 
 if (shirt === "red" | shirt === "lumberjack" | shirt === "red lumberjack" | shirt === "red shirt") {
@@ -117,7 +117,7 @@ alert("Something appears to be moving behind a tree just to your north.");
 var investigate = confirm("Do you want to investigate, -OK- or run? -CANCEL-");
 if (investigate === true) {
   alert("You walk over to the tree." + " Nervous, but " + weapon + " at the ready.");
-  var attackOne = Math.round(Math.random() * 3);
+  var attackOne = Math.round(Math.random());
   if (attackOne === 0) {
     alert("A zombie jumps out from behind the tree!");
     var attackTwo = Math.round(Math.random() * 3);
