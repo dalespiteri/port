@@ -4,41 +4,44 @@ alert("It's been months since you last saw another person. You think about this 
 alert("It's an odd task considering the circumstances, but it's nice to keep some semblance of normality in this messed up time.")
 var shirt = prompt("There are three shirts on the bed. A red checkered lumberjack fleece, a blue button up oxford cotton, and a green T-shirt that reads 'I'm with stupid' and has an arrow that points up. What colour do you pick?").toLowerCase();
 
-if (shirt === "red" | shirt === "lumberjack" | shirt === "red lumberjack" | shirt === "red shirt") {
-  var shirt = "red lumberjack shirt";
-  alert("You look pretty stupid in that" + " " + shirt + ". I mean it's the zombie apocolypse and you decided to where the brightest colour you could find. Solid choice.");
-  alert("P.S. Have you never watched Star Trek? Who chooses a red shirt when starting an adventure?");
-  alert("Have fun dying.");
-} 
-
-else if (shirt === "blue" | shirt === "oxford" | shirt === "oxford cotton" | shirt === "button up" | shirt === "blue button up" | shirt === "blue button up oxford cotton") {
-  var shirt = "blue button up oxford cotton";
-  alert("Are you going to a frat party? What a weird choice. I guess you gotta look stylish as you run through the woods looking for dinner tonight in a" + " " + shirt + ". Probably should have gone with the green shirt...");
-  alert("...because you're stupid.");
-  alert("Trust me.");
-  alert("You're gonna die.");
-} 
-
-else if (shirt === "green" | shirt === "T-shirt" | shirt === "tshirt" | shirt === "green T-shirt" | shirt === "green shirt") {
-  var shirt = "sweet green T";
-  alert("Well that's a pretty good choice! I mean we are at a cottage, so we're probably in the woods. Lots of trees and bushes around. Out of red, blue, and green, I'd say a" + " " + shirt + " " + "is the least stupid choice.");
-  alert("Which you realize is ironic as you look down at your chest.");
-} 
-
-else if (shirt == null | shirt == "") {
-  var shirt = "ugly naked body";
-  alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
-  alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
-  alert("You're naked. Congratulations.");
-  alert("Idiot.");
-}
-
-else {
-  var shirt = "ugly naked body";
-  alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
-  alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
-  alert("You're naked. Congratulations.");
-  alert("Idiot.");
+switch(shirt) {
+    case "red":
+    case "lumberjack":
+    case "red lumberjack":
+    case "red shirt":
+        var shirt ="red lumberjack shirt";
+        alert("You look pretty stupid in that" + " " + shirt + ". I mean it's the zombie apocolypse and you decided to where the brightest colour you could find. Solid choice.");
+        alert("P.S. Have you never watched Star Trek? Who chooses a red shirt when starting an adventure?");
+        alert("Have fun dying.");
+        break;
+    case "blue":
+    case "oxford":
+    case "oxford cotton":
+    case "button up":
+    case "blue button up":
+    case "blue button up oxford cotton":
+        var shirt = "blue button up oxford cotton";
+        alert("Are you going to a frat party? What a weird choice. I guess you gotta look stylish as you run through the woods looking for dinner tonight in a" + " " + shirt + ". Probably should have gone with the green shirt...");
+        alert("...because you're stupid.");
+        alert("Trust me.");
+        alert("You're gonna die.");
+        break;
+    case "green": 
+    case "T-shirt":
+    case "tshirt":
+    case "green T-shirt":
+    case "green shirt":
+        var shirt = "sweet green T";
+        alert("Well that's a pretty good choice! I mean we are at a cottage, so we're probably in the woods. Lots of trees and bushes around. Out of red, blue, and green, I'd say a" + " " + shirt + " " + "is the least stupid choice.");
+        alert("Which you realize is ironic as you look down at your chest.");
+        break;
+    default:
+        var shirt = "ugly naked body";
+        alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
+        alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
+        alert("You're naked. Congratulations.");
+        alert("Idiot.");
+        break;        
 }
 
 alert("You're standing in the kitchen with your" + " " + shirt + " on full display.");
