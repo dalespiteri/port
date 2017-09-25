@@ -347,6 +347,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
     
     alert("You are finally killed by a " + threat + ".");
     alert("Your game is over.");
+    location.reload();
     
     
 } else {
