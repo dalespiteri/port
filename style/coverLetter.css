@@ -83,6 +83,7 @@ h1 {
     text-indent: 20px;
 }
 
-.gone {
-    opacity: 0;
+.signature {
+    width: 100px;
+    margin-top: 20px;
 }
