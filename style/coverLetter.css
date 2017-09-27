@@ -101,7 +101,6 @@ h1 {
 
 .avatar img {
     width: 70%;
-    opacity: 0;
 }
 
 .letter {
@@ -227,7 +226,6 @@ h1 {
 }
 
 .roll {
-    opacity: 1;
     animation-name: avatar-roll;
     animation-duration: 1500ms;
     animation-iteration-count: 1;
