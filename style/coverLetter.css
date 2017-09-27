@@ -52,6 +52,10 @@ input:last-child {
     border: 2px solid white;
 }
 
+#your-name {
+    text-transform: capitalize;
+}
+
 @keyframes avatar-slide {
     0% {
         transform: scale(0.01);
