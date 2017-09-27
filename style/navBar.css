@@ -1,4 +1,4 @@
-.navBar {
+.nav-bar {
     height: 100%;
     background-color: white;
     position: absolute;
@@ -19,12 +19,12 @@
     width: 25%;
 }
 
-.navBarFront { /* navigation style for front page */
+.nav-bar-front { /* navigation style for front page */
     left: 50%;
     width: 50%;
 }
 
-.navList {
+.nav-list {
     list-style: none;
     text-align: center;
     margin: 0;
@@ -42,11 +42,11 @@
     
     IE doesn't handle transitions based off LEFT so when using IE I'm using transform: translateX instead
     
-    The draw back here, and why I don't just use this for other browsers as well is that off the first transition from navBarFront to navBarLeft, using translate leaves a gap in the animation of the two panels uncovering the underlying site that should be hidden. Using left instead of translateX fixes this problem, but unfortunately isn't compatible with IE 
+    The draw back here, and why I don't just use this for other browsers as well is that off the first transition from nav-bar-front to navBarLeft, using translate leaves a gap in the animation of the two panels uncovering the underlying site that should be hidden. Using left instead of translateX fixes this problem, but unfortunately isn't compatible with IE 
     
     */
     
-    .navBarFront {
+    .nav-bar-front {
         transform: translateX(100%);
         left: 0;
         width: 50%;
@@ -57,7 +57,7 @@
     }
 }
 
-.navListLink {
+.nav-list-link {
     box-shadow: 0 2px 5px rgba(0,0,0,0.35);
     margin: 25px 0;
     padding: 10px 40px;
@@ -68,7 +68,7 @@
     bottom: 0;
 }
 
-.navListLink:hover {
+.nav-list-link:hover {
     bottom: 2px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.35);
     transform: scale(1.005);
@@ -82,18 +82,18 @@
     box-shadow: 0 0 0 black; /* 0 out the shadow */
 }
 
-.aboutLinkActive {
+.about-link-active {
     background-color: #021116;
 }
 
-.skillsLinkActive {
+.skills-link-active {
     background-color: #be2a2e;
 }
 
-.portfolioLinkActive {
+.portfolio-link-active {
     background-color: #2e3192;
 }
 
-.contactLinkActive {
+.contact-link-active {
     background-color: #8e7161;
 }

@@ -227,7 +227,7 @@ a {
     /* make sure all pages have 100px of dead space at the top and bottom */
 }
 
-.centeredColumn {
+.centered-column {
     /* reusable CSS for multiple elements that use a centered column structure throughout the site */
     display: flex;
     flex-direction: column;
@@ -243,20 +243,20 @@ a {
     z-index: 3;
 }
 
-.subTopPage {
+.sub-top-page {
     /* the page currently viewed is always above all other pages except the page sliding in */
     z-index: 2;
 }
 
-.pageLeft {
+.page-left {
     left: 0;
 }
 
-.pageRight {
+.page-right {
     right: 0;
 }
 
-.pageLeftPre {
+.page-left-pre {
     animation-name: moveRight;
     animation-duration: 600ms;
     /* match the nav bar movement */
@@ -266,7 +266,7 @@ a {
     left: 0;
 }
 
-.pageRightPre {
+.page-right-pre {
     animation-name: moveLeft;
     animation-duration: 600ms;
     animation-iteration-count: 1;
@@ -284,7 +284,7 @@ a {
 /* window height MQs for pages that normally have their content centered vertically */
 
 @media only screen and (max-height: 500px) {
-    .centeredColumn {
+    .centered-column {
         justify-content: flex-start;
         /* remove flex centering vertically of pages where the content is larger than the screen dimensions to prevent content from being pushed out of page limits */
     }
@@ -292,11 +292,11 @@ a {
 
 @media only screen and (max-height: 550px) {
     /* just in case the navigation menu won't fit vertically on the screen*/
-    .navBar {
+    .nav-bar {
         align-items: flex-start;
         overflow-y: auto;
     }
-    .navList {
+    .nav-list {
         margin: 100px 0;
     }
 }
@@ -314,9 +314,9 @@ a {
         /* pages now take up the entire screen */
     }
     /* nav bar MQs*/
-    .navBar,
-    .navBarLeft,
-    .navBarRight {
+    .nav-bar,
+    .nav-bar-left,
+    .nav-bar-right {
         background-color: rgba(255, 255, 255, 0.97);
         /* give the user a slight sense of the page they're on while in full screen navigation */
         width: 100%;
@@ -327,7 +327,7 @@ a {
         /* addClass for when the navigation menu is selected to move back on screen */
         left: 0;
     }
-    .pageRightPre {
+    .page-right-pre {
         /* adjusts the page swap animation so it always comes from the right to suit the smaller screen's new menu style */
         animation-name: moveRight;
     }
@@ -336,7 +336,7 @@ a {
         /* make the hamburger menu button visible */
     }
     /* front page MQs */
-    .frontPage {
+    .front-page {
         /* requires a separate class than other pages to adjust to the full screen layout */
         width: 100%;
     }
@@ -378,11 +378,11 @@ a {
         /* less dead space on smaller devices */
     }
     /* front page MQs */
-    .frontContent {
+    .front-content {
         max-width: 80%;
         /* stops from feeling to cramped on xs mobile devices */
     }
-    .speechBubble {
+    .speech-bubble {
         font-size: 1em;
         line-height: 1.5;
         margin: auto;
@@ -400,16 +400,16 @@ a {
         /* center menu */
         padding: 10px;
     }
-    .skillsPage li:nth-child(even) {
+    .skills-page li:nth-child(even) {
         /* remove side border dividers in new layout */
         border-left: 0;
         border-right: 0;
     }
-    .skillsPage li {
+    .skills-page li {
         /* dividers now on bottom */
         border-bottom: 2px solid white;
     }
-    .skillsPage li:last-child {
+    .skills-page li:last-child {
         /* remove unecessary dividers on last list item */
         border: 0;
     }

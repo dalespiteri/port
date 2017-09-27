@@ -1,4 +1,4 @@
-.skillsPage {
+.skills-page {
     background: linear-gradient(#be2a2e, #9e2750);
     overflow-y: auto;
     overflow-x: hidden; /* hide elements off screen like the bottom skill descriptions */
@@ -39,7 +39,7 @@
     pointer-events: none; /* remove the ability to click the skill and trigger the animations if they are already active on the page */
 }
 
-.skillsPage li:nth-child(even) { /* add a division border between list items */
+.skills-page li:nth-child(even) { /* add a division border between list items */
     border-left: 3px solid white;
     border-right: 3px solid white;
 }

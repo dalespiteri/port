@@ -6,18 +6,18 @@ function pageSwap(link, section) {
 
     $(link).click(function () {
         var page = $('.page');
-        var nav = $('.navBar');
+        var nav = $('.nav-bar');
 
         if (nav.hasClass('navBarLeft')) {
 
             // page swapping will always be relative to what the current page layout is, so the page and nav bar will always swap depending on what the current layout of the page is. To determine what layout is currently in use, we use the current active class of the navigation bar. So if the navigation bar has the class navBarLeft, we can assume the layout is currently with the navigation bar on the left, and page on the right, therefore our script will run animations to swap the layout next time a link is clicked
 
-            $(section).addClass('topPage pageLeftPre');
+            $(section).addClass('topPage page-left-pre');
 
             // topPage ensures the current selected page will be above all other pages using z-indexing
-            // pageLeftPre is the animation of the page from offscreen left, to on screen left
+            // page-left-pre is the animation of the page from offscreen left, to on screen left
 
-            nav.removeClass('navBarFront navBarLeft navBarRight').addClass('navBarRight');
+            nav.removeClass('nav-bar-front navBarLeft navBarRight').addClass('navBarRight');
 
             // remove all preexisting navigation bar classes controlling positioning just in case, and apply the new navigation position on the right
 
@@ -25,14 +25,14 @@ function pageSwap(link, section) {
 
                 // we want to wait until the animation of the pages is complete before adjusting the code to prep for the next transition 
 
-                page.removeClass('topPage subTopPage pageLeft pageRight');
+                page.removeClass('topPage sub-top-page page-left page-right');
 
                 // remove all page position classes just in case 
 
-                $(section).addClass('subTopPage pageLeft').removeClass('pageLeftPre');
+                $(section).addClass('sub-top-page page-left').removeClass('page-left-pre');
 
                 // add our new position classes to lock in for the next transition
-                // the subTopPage class ensures that while the next animation occurs, our previous page will stay on top of the other pages until AFTER a new topPage moves above and animates overtop and replaces it as our new subTopPage - this is to hide the shuffling of pages from the user's view
+                // the sub-top-page class ensures that while the next animation occurs, our previous page will stay on top of the other pages until AFTER a new topPage moves above and animates overtop and replaces it as our new sub-top-page - this is to hide the shuffling of pages from the user's view
                 // we setTimeout to make sure this shuffle is done after the animations are complete and match our timeout to our animation durations which in this case is 600ms
 
             }, 600);
@@ -41,21 +41,21 @@ function pageSwap(link, section) {
 
             // now we just reverse our code to prep the pages in the opposite layout since our if statement in this scenario isn't true - if the navBarLeft class isn't applied to our navigation menu, then it must be on the right currently, and our class changes are the same as before except reversed 
 
-            $(section).addClass('topPage pageRightPre');
-            nav.removeClass('navBarFront navBarLeft navBarRight').addClass('navBarLeft');
+            $(section).addClass('topPage page-right-pre');
+            nav.removeClass('nav-bar-front navBarLeft navBarRight').addClass('navBarLeft');
             setTimeout(function () {
-                page.removeClass('topPage subTopPage pageLeft pageRight');
-                $(section).addClass('subTopPage pageRight').removeClass('pageRightPre');
+                page.removeClass('topPage sub-top-page page-left page-right');
+                $(section).addClass('sub-top-page page-right').removeClass('page-right-pre');
             }, 600);
         }
 
     });
 }
 
-pageSwap('.aboutLink', '.aboutPage');
-pageSwap('.skillsLink', '.skillsPage');
-pageSwap('.portfolioLink', '.portfolioPage');
-pageSwap('.contactLink', '.contactPage');
+pageSwap('.about-link', '.aboutPage');
+pageSwap('.skills-link', '.skills-page');
+pageSwap('.portfolio-link', '.portfolioPage');
+pageSwap('.contact-link', '.contactPage');
 
 function activeLink(link, activeClass) {
 
@@ -63,7 +63,7 @@ function activeLink(link, activeClass) {
     // link is the link clicked - activeClass is the class associated with that link
 
     $(link).click(function () {
-        $('.navList li').removeClass('aboutLinkActive skillsLinkActive portfolioLinkActive contactLinkActive navLinkActive');
+        $('.nav-list li').removeClass('about-link-active skills-link-active portfolio-link-active contact-link-active navLinkActive');
 
         // remove any active link appearance classes 
 
@@ -75,18 +75,18 @@ function activeLink(link, activeClass) {
     });
 }
 
-activeLink('.aboutLink', 'aboutLinkActive');
-activeLink('.skillsLink', 'skillsLinkActive');
-activeLink('.portfolioLink', 'portfolioLinkActive');
-activeLink('.contactLink', 'contactLinkActive');
+activeLink('.about-link', 'about-link-active');
+activeLink('.skills-link', 'skills-link-active');
+activeLink('.portfolio-link', 'portfolio-link-active');
+activeLink('.contact-link', 'contact-link-active');
 
 // controls the hamburger menu animation for smaller screens
 
-$('.nav-menu-toggle, .navListLink').click(function () {
+$('.nav-menu-toggle, .nav-list-link').click(function () {
 
     // clicking either hamburger menu or a link will toggle the menu state between an open menu option  (hamburger menu) and a close menu option (an x) 
 
-    $('.navBar').toggleClass('nav-bar-full');
+    $('.nav-bar').toggleClass('nav-bar-full');
 
     // nav-bar-full is the new add class for smaller screen that opens a full page menu
 
@@ -111,18 +111,18 @@ $('.nav-menu-toggle').click(function () {
     $('.nav-menu-toggle').removeClass('nav-menu-attract');
 });
 
-$('.navListLink').click(function() {
+$('.nav-list-link').click(function() {
     $('.content h1').removeClass('h1-bounce');
 })
 
-$('.skillsLink').click(function() {
+$('.skills-link').click(function() {
     $('.skills-content h1').addClass('h1-bounce');
 });
 
-$('.portfolioLink').click(function() {
+$('.portfolio-link').click(function() {
     $('.portfolio-content h1').addClass('h1-bounce');
 });
 
-$('.aboutLink').click(function() {
+$('.about-link').click(function() {
     $('.about-content h1').addClass('h1-bounce');
 });

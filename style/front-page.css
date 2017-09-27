@@ -1,4 +1,4 @@
-.frontPage {
+.front-page {
     width: 50%;
     height: 100%;
     background: linear-gradient(#367e96, #1d4f89);
@@ -6,29 +6,29 @@
     overflow-y: auto; /* just in case the screen height drops too low on smaller mobile devices */
 }
 
-.frontContent {
+.front-content {
     position: relative;
     bottom: 2%; /* adjusted to visually center the content - due to shadow on the main logo and transparant space in the source image */
 }
 
-.pixelLogo {
+.pixel-logo {
     width: 70%; /* smaller than the speech bubble... */
     min-width: 150px; /* ...but not too small */
     margin: auto;
     margin-bottom: 20px;
 }
 
-.pixelLogo:hover {
+.pixel-logo:hover {
     animation-name: logoSpin;
     animation-duration: 650ms;
     animation-iteration-count: 1;
 }
 
-.pixelLogo img {
+.pixel-logo img {
     width: 100%;
 }
 
-.speechBubble {
+.speech-bubble {
     text-align: center;
     position: relative; /* bubble arrow needs relative absolute positioning */
     font-size: 1.35em;
@@ -40,7 +40,7 @@
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
-.speechBubble:before { /* speech bubble arrow - create a triangle using a mix of visible and invisible borders */
+.speech-bubble:before { /* speech bubble arrow - create a triangle using a mix of visible and invisible borders */
     content: '';
     position: absolute;
     top: -30px;
