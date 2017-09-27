@@ -1,9 +1,9 @@
-.contactPage {
+.contact-page {
     background: linear-gradient(#8e7161, #755361);
     overflow-y: auto;
 }
 
-.contactContent {
+.contact-content {
     width: 100%;
     text-align: center;
 }
@@ -16,7 +16,7 @@
     margin-bottom: 70px;
 }
 
-.contactEmail {
+.contact-email {
     color: white;
     background-image: transparent; /* for browsers that don't support gradients */
     background-image: -webkit-linear-gradient(transparent 50%, white 50%);
@@ -36,30 +36,30 @@
 
 @media only screen and (min-width: 768px) { /* avoid hover effects on mobile */
     
-    .contactEmail:hover .top-border {
+    .contact-email:hover .top-border {
         width: 100%;
         border-width: 1px;
         transition: all 150ms;
     }
-    .contactEmail:hover .right-border {
+    .contact-email:hover .right-border {
         height: 100%;
         border-width: 1px;
         transition: all 150ms;
         transition-delay: 150ms;
     }
-    .contactEmail:hover .bottom-border {
+    .contact-email:hover .bottom-border {
         width: 100%;
         border-width: 1px;
         transition: all 150ms;
         transition-delay: 300ms;
     }
-    .contactEmail:hover .left-border {
+    .contact-email:hover .left-border {
         height: 100%;
         border-width: 1px;
         transition: all 150ms;
         transition-delay: 450ms;
     }
-    .contactEmail:hover {
+    .contact-email:hover {
         background-position: bottom;
         color: #666;
         transition: 150ms;
@@ -93,19 +93,19 @@
     
 }
 
-.contactLogoList {
+.contact-logo-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.contactLogoList li {
+.contact-logo-list li {
     display: inline; /* change the list to horizontal layout */
     margin: 0 20px;
     cursor: pointer;
 }
 
-.contactLogoList img {
+.contact-logo-list img {
     width: 6%;
     min-width: 70px;
     transform: translateY(0);
@@ -113,7 +113,7 @@
     transition: all 200ms;
 }
 
-.contactLogoList img:hover {
+.contact-logo-list img:hover {
     transform: translateY(-10px);
     filter: grayscale(0);
 }

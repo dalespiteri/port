@@ -52,10 +52,10 @@ function pageSwap(link, section) {
     });
 }
 
-pageSwap('.about-link', '.aboutPage');
+pageSwap('.about-link', '.about-page');
 pageSwap('.skills-link', '.skills-page');
-pageSwap('.portfolio-link', '.portfolioPage');
-pageSwap('.contact-link', '.contactPage');
+pageSwap('.portfolio-link', '.portfolio-page');
+pageSwap('.contact-link', '.contact-page');
 
 function activeLink(link, activeClass) {
 

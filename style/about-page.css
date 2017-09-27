@@ -1,4 +1,4 @@
-.aboutPage {
+.about-page {
     background: linear-gradient(#0f3744, #021116);
     overflow-y: auto; /* pages have hidden overflow by default - override */
 }
