@@ -1,5 +1,5 @@
 function randomNumber(range) {
-    return Math.round(Math.random() * range);
+  return Math.round(Math.random() * range);
 }
 
 var threatList = ["zombie", "evil bear", "rabie infested English bulldog", "alt-right supporter"];
@@ -12,44 +12,44 @@ alert("It's been months since you last saw another person. You think about this 
 alert("It's an odd task considering the circumstances, but it's nice to keep some semblance of normality in this messed up time.")
 var shirt = prompt("There are three shirts on the bed. A red checkered lumberjack fleece, a blue button up oxford cotton, and a green T-shirt that reads 'I'm with stupid' and has an arrow that points up. What colour do you pick?").toLowerCase();
 
-switch(shirt) {
-    case "red":
-    case "lumberjack":
-    case "red lumberjack":
-    case "red shirt":
-        var shirt ="red lumberjack shirt";
-        alert("You look pretty stupid in that" + " " + shirt + ". I mean it's the " + threat + " apocolypse and you decided to where the brightest colour you could find. Solid choice.");
-        alert("P.S. Have you never watched Star Trek? Who chooses a red shirt when starting an adventure?");
-        alert("Have fun dying.");
-        break;
-    case "blue":
-    case "oxford":
-    case "oxford cotton":
-    case "button up":
-    case "blue button up":
-    case "blue button up oxford cotton":
-        var shirt = "blue button up oxford cotton";
-        alert("Are you going to a frat party? What a weird choice. I guess you gotta look stylish as you run through the woods looking for dinner tonight in a" + " " + shirt + ". Probably should have gone with the green shirt...");
-        alert("...because you're stupid.");
-        alert("Trust me.");
-        alert("You're gonna die.");
-        break;
-    case "green": 
-    case "T-shirt":
-    case "tshirt":
-    case "green T-shirt":
-    case "green shirt":
-        var shirt = "sweet green T";
-        alert("Well that's a pretty good choice! I mean we are at a cottage, so we're probably in the woods. Lots of trees and bushes around. Out of red, blue, and green, I'd say a" + " " + shirt + " " + "is the least stupid choice.");
-        alert("Which you realize is ironic as you look down at your chest.");
-        break;
-    default:
-        var shirt = "ugly naked body";
-        alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
-        alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
-        alert("You're naked. Congratulations.");
-        alert("Idiot.");
-        break;        
+switch (shirt) {
+  case "red":
+  case "lumberjack":
+  case "red lumberjack":
+  case "red shirt":
+    var shirt = "red lumberjack shirt";
+    alert("You look pretty stupid in that" + " " + shirt + ". I mean it's the " + threat + " apocolypse and you decided to where the brightest colour you could find. Solid choice.");
+    alert("P.S. Have you never watched Star Trek? Who chooses a red shirt when starting an adventure?");
+    alert("Have fun dying.");
+    break;
+  case "blue":
+  case "oxford":
+  case "oxford cotton":
+  case "button up":
+  case "blue button up":
+  case "blue button up oxford cotton":
+    var shirt = "blue button up oxford cotton";
+    alert("Are you going to a frat party? What a weird choice. I guess you gotta look stylish as you run through the woods looking for dinner tonight in a" + " " + shirt + ". Probably should have gone with the green shirt...");
+    alert("...because you're stupid.");
+    alert("Trust me.");
+    alert("You're gonna die.");
+    break;
+  case "green":
+  case "T-shirt":
+  case "tshirt":
+  case "green T-shirt":
+  case "green shirt":
+    var shirt = "sweet green T";
+    alert("Well that's a pretty good choice! I mean we are at a cottage, so we're probably in the woods. Lots of trees and bushes around. Out of red, blue, and green, I'd say a" + " " + shirt + " " + "is the least stupid choice.");
+    alert("Which you realize is ironic as you look down at your chest.");
+    break;
+  default:
+    var shirt = "ugly naked body";
+    alert("Wow. You couldn't choose a colour properly. You're going to last a long time.");
+    alert("You know what? Since you couldn't even choose a shirt properly, I'm forced to assume you couldn't figure out to dress yourself at all.");
+    alert("You're naked. Congratulations.");
+    alert("Idiot.");
+    break;
 }
 
 alert("You're standing in the kitchen with your" + " " + shirt + " on full display.");
@@ -59,34 +59,24 @@ var weapon = prompt("You walk outside to your makeshift hunting shack. There's a
 if (weapon === "frying pan" | weapon === "cast iron frying pan" | weapon === "pan" | weapon === "cast iron pan" | weapon === "iron pan" | weapon === "cast frying pan" | weapon === "cast pan") {
   var weapon = "pan";
   alert("You grab the " + weapon + ". Clearly someone has been playing too much PUBG.");
-}
-
-else if (weapon === "nerf gun" | weapon === "nerf") {
+} else if (weapon === "nerf gun" | weapon === "nerf") {
   var weapon = "nerf gun";
   alert("You pick up the " + weapon + ". It's a good choice because you have thousands of hours of experience using this weapon from childhood.");
   alert("You grab a stack of darts, and head out into the woods.");
   alert("You start to wonder if a " + shirt + " and a " + weapon + " are the best hunting gear in a " + threat + " apocalypse...");
-}
-
-else if (weapon === "harry potter" | weapon === "harry potter dvd" | weapon === "dvd" | weapon === "potter dvd") {
+} else if (weapon === "harry potter" | weapon === "harry potter dvd" | weapon === "dvd" | weapon === "potter dvd") {
   var weapon = "Harry Potter and the Philosopher's Stone: Criterion Collection DVD";
   alert("Upon closer inspection, this isn't just any regular Harry Potter DVD. This is a " + weapon);
-}
-
-else if (weapon === "military grade assault rifle" | weapon === "military grade rifle" | weapon === "assault rifle" | weapon === "military rifle" | weapon === "rifle") {
+} else if (weapon === "military grade assault rifle" | weapon === "military grade rifle" | weapon === "assault rifle" | weapon === "military rifle" | weapon === "rifle") {
   var weapon = "assault rifle";
   alert("Hey, an assault rifle. Probably a logical choice considering the circumstances. You unfortunately have very little experience with this though.");
   alert("Good luck.");
-}
-
-else if (weapon === "gun") {
+} else if (weapon === "gun") {
   var weapon = "military grade assault rifle loaded with 9mm nerf bullets";
   alert("Well that wasn't very specific. There were two guns in the shed.");
   alert("You clearly have an attention for detail.");
   alert("You pick up the assault rifle and foam nerf bullets.");
-}
-
-else {
+} else {
   var weapon = "fists";
   if (shirt === "ugly naked body" && weapon === "your fists") {
     alert("Wow.");
@@ -96,8 +86,7 @@ else {
     alert("I'm going to level with you. Your chances of survival have dropped to one in a thousand.");
     alert("Let's also be clear. This is programmed. When I say you are going to die 999 times in 1000 - you're going to die 999 times in 1000.");
     alert("Godspeed you special specimen of stupidity.");
-  }
-  else {
+  } else {
     alert("So we have found your limitations.");
     alert("You can pick a shirt and dress yourself, but picking one weapon is clearly too difficult.");
     alert("Get ready Rocky. You're about to enter the woods with nothing but " + weapon + " to protect you.");
@@ -215,27 +204,27 @@ if (shirt === "ugly naked body") {
 
 alert("A " + threat + " suddenly comes running in your direction!");
 var attackThree = randomNumber(3);
-  if (attackThree === 0) {
-    alert("You didn't have time to ready your " + weapon + ".");
-    alert("The " + threat + " is Dale Spiteri, and you're a Skor McFlurry.");
-    alert("If you don't know Dale Spiteri that well, it's another way of saying that you were savagely eaten.");
-    alert("Sorry.");
-    alert("You're dead.");
-    location.reload();
+if (attackThree === 0) {
+  alert("You didn't have time to ready your " + weapon + ".");
+  alert("The " + threat + " is Dale Spiteri, and you're a Skor McFlurry.");
+  alert("If you don't know Dale Spiteri that well, it's another way of saying that you were savagely eaten.");
+  alert("Sorry.");
+  alert("You're dead.");
+  location.reload();
+} else {
+  if (derekGone !== true) {
+    alert("Derek doesn't make it.");
+    alert("He's been bitten.");
+    alert("Using the time Derek's death has brought you, you finish the " + threat + " with your " + weapon + ".");
+    alert("You bend over to comfort Derek.");
+    alert("He asks what that thing was.");
+    alert("Apparently he didn't even realize the apolcalypse was taking place.");
+    alert("He's just been living in the woods.");
+    alert("He was always a bit weird.");
   } else {
-    if (derekGone !== true) {
-      alert("Derek doesn't make it.");
-      alert("He's been bitten.");
-      alert("Using the time Derek's death has brought you, you finish the " + threat + " with your " + weapon + ".");
-      alert("You bend over to comfort Derek.");
-      alert("He asks what that thing was.");
-      alert("Apparently he didn't even realize the apolcalypse was taking place.");
-      alert("He's just been living in the woods.");
-      alert("He was always a bit weird.");
-    } else {
-      alert("You manage to take care of the " + threat + " with your " + weapon + ".");
-    }
+    alert("You manage to take care of the " + threat + " with your " + weapon + ".");
   }
+}
 
 alert("Well, this has been a disaster so far.");
 alert("You're standing on a path in woods at this point, and there is a path to the North, a path to the West, and path that leads back home.");
@@ -250,12 +239,12 @@ if (direction === "north" | direction === "go north" | direction === "north path
   alert("He lunges at you. You're a cupcake, and He's Samwell Tarly.");
   alert("Ya, that means you're dead.");
   alert("Eaten by " + threat + " Jon Snow.");
-  
+
 } else if (direction === "west" | direction === "go west" | direction === "west path") {
   alert("You go West.");
   alert("There's a boat.");
   var boat = confirm("Do you want to get in the boat?");
-  
+
   if (boat === true) {
     alert("You get in boat and start rowing to a light you see in the distance.");
     alert("HOLY SHIT! THERE'S A " + threat + " DOING THE BREAST STROKE CHASING YOU!");
@@ -264,7 +253,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
     alert("You hit him with your paddle.");
     alert("You've scared him off, but you've broken your only paddle.");
     var swim = confirm("Do you get out and swim?");
-    
+
     if (swim === true) {
       alert("You're not that far from the island with the light.");
       alert("You reach the shore. You shouldn't have left your cottage. This has gone horribly.");
@@ -272,7 +261,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
       alert("As you approach it, you notice there's a slot... approximately five inches wide, but very narrow...");
       var action = prompt("What do you do?");
       var dvd = action.includes("dvd");
-      
+
       if (dvd === true && weapon === "Harry Potter and the Philosopher's Stone: Criterion Collection DVD") {
         alert("You slide " + weapon + " into the slot.");
         alert("A giant television bursts out of the roof of the stone building high into the air.");
@@ -283,13 +272,13 @@ if (direction === "north" | direction === "go north" | direction === "north path
         alert("They just pass and stare at the giant screen... transfixed by the magical world crafted by J.K. Rowling.");
         alert("You've saved the world.")
         alert("You win.");
-        
+
       } else if (dvd === true && weapon !== "Harry Potter and the Philosopher's Stone: Criterion Collection DVD") {
         alert("You don't have the DVD...");
         alert("Bet you wish you took that now...");
         alert("" + threat + "s swarm you and eat you.");
         alert("You're dead.");
-        
+
       } else if (dvd === true && shirt === "ugly naked body" && weapon === "fists") {
         alert("Remember when I said you made stupid choices and that I'd get you for it?");
         alert("Time to pay the piper.");
@@ -302,7 +291,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
         alert("You've saved the world.")
         alert("You trip on a pebal as you're leaving the island.")
         var probablyDead = randomNumber(999);
-          
+
         if (probablyDead === 999) {
           alert("Holy fucking shit. You don't realize this... but you just avoided certain death.");
           alert("You're fine. You walk away. You saved the world. It was 1 in 1000.");
@@ -311,7 +300,7 @@ if (direction === "north" | direction === "go north" | direction === "north path
           alert("You fall and break your neck.");
           alert("You die, and you lose.");
         }
-        
+
       } else {
         alert("You clearly don't know what you're doing...");
         alert("" + threat + "s swarm the island");
@@ -339,17 +328,17 @@ if (direction === "north" | direction === "go north" | direction === "north path
   alert("It's swarming with " + threat + "s!");
   var attackHome = randomNumber(3);
 
-    while (attackHome === 1 | attackHome === 2 | attackHome === 3) {
-        var threatAttack = ["A " + threat + " jumps and attacks you with a spinning round-house kick... but you defelect it with your " + weapon + ".", "A " + threat + " cartwheels into you but you kick it threw an open window!", "Two " + threat + "s charge you at once, but using your kung fu you learned from The Matrix trilogy, you easily dispatch of both!"];
-        alert(threatAttack[randomNumber(2)]);
-        var attackHome = randomNumber(3);
-    }
-    
-    alert("You are finally killed by a " + threat + ".");
-    alert("Your game is over.");
-    location.reload();
-    
-    
+  while (attackHome === 1 | attackHome === 2 | attackHome === 3) {
+    var threatAttack = ["A " + threat + " jumps and attacks you with a spinning round-house kick... but you defelect it with your " + weapon + ".", "A " + threat + " cartwheels into you but you kick it threw an open window!", "Two " + threat + "s charge you at once, but using your kung fu you learned from The Matrix trilogy, you easily dispatch of both!"];
+    alert(threatAttack[randomNumber(2)]);
+    var attackHome = randomNumber(3);
+  }
+
+  alert("You are finally killed by a " + threat + ".");
+  alert("Your game is over.");
+  location.reload();
+
+
 } else {
   var direction = "just stand there";
   if (shirt === "ugly naked body" && weapon === "fists" && direction === "just stand there") {
