@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FAF5ED;
+  font-family: 'exo', sans-serif;
+}
+
+.scoreHeaderAdd {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #D33534;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  top: 0;
+}
+
+.addPlayerIcon {
+  height: 40px;
+}
+
+#addPlayerValue {
+  width: 200px;
+  margin: auto 20px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #FAF5ED;
+  color: #FAF5ED;
+  font-size: 16pt;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'exo', sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #FAF5ED;
+  opacity: 0.5;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+#addPlayerValue:focus {
+  outline: 0;
+}
+
+#addPlayerButton {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms;
+  border: 2px solid #FAF5ED;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+#addPlayerButton:hover {
+  opacity: 1;
+}
+
+#addPlayerButton:active {
+  transform: scale(0.95);
+}
+
+#addPlayerButton img {
+  width: 100%;
+  height: auto;
+}
+
+#resetScore {
+  position: absolute;
+  width: 175px;
+  height: 40px;
+  right: 25px;
+  transition: all 100ms;
+  color: #FAF5ED;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #FAF5ED;
+  border-radius: 10px;
+  font-size: 10pt;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#resetScore img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+@keyframes resetSpin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+#resetScore:hover {
+  opacity: 1;
+}
+
+#resetScore:hover img {
+  animation-name: resetSpin;
+  animation-duration: 1750ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+
+#resetScore:active {
+  transform: scale(0.95);
+}
+
+.scoreHeaderStandings {
+  margin-top: 100px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAF5ED;
+}
+
+.scoreHeaderStandings ul {
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FAF5ED;
+}
+
+.scoreHeaderStandings ul li {
+  background-color: #BD1311;
+  padding: 10px 20px;
+  display: inline;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.scoreHeaderStandings ul li:nth-child(1) {
+  font-weight: 900;
+}
+
+#scoreBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 30pt;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #FAF5ED;
+}
+
+@keyframes slideIn {
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.slideInAni {
+  animation-name: slideIn;
+  animation-duration: 550ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.playerBox {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 30px 10px 30px;
+  background-color: #D33534;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'exo', sans-serif;
+  margin: 0 10px 10px 10px;
+  border-bottom: 20px solid #BD1311;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.playerBox button {
+  font-family: 'exo', sans-serif;
+  font-weight: 900;
+}
+
+.deleteButton {
+  position: absolute;
+  width: 32px;
+  height: 30px;
+  font-size: 15px;
+  text-align: center;
+  right: 0;
+  top: 0;
+  margin: 0;
+  color: #cf2027;
+  background-color: #FAF5ED;
+  border: 0;
+  opacity: 0.5;
+  transition: all 200ms;
+  border-radius: 0 10px;
+}
+
+.deleteButton img {
+  position: relative;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.scoreButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.scoreAddButton {
+  width: 45px;
+  height: 40px;
+  font-size: 14pt;
+  background-color: transparent;
+  border: 2px solid #FAF5ED;
+  color: #FAF5ED;
+  transition: transform 100ms;
+  border-radius: 7px;
+}
+
+.scoreAddButton:hover {
+  background-color: #FAF5ED;
+  color: #cf2027;
+  transform: translateY(-3px);
+}
+
+.scoreAddButton:active {
+  transform: translateY(3px);
+}
+
+.scoreAddTotalButton {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #FAF5ED;
+  color: #FAF5ED;
+  text-transform: uppercase;
+  font-size: 20pt;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+
+.scoreAddTotalButton:hover {
+  background-color: #FAF5ED;
+  color: #D33534;
+}
+
+.scoreTotals {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes scoreSpin {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.scoreSpin {
+  animation-name: scoreSpin;
+  animation-iteration-count: 1;
+  animation-duration: 500ms;
+}
+
+.scoreTotals h1 {
+  font-size: 50pt;
+  margin-bottom: 0;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #cf2027;
+  }
+  50% {
+    background-color: #961116;
+  }
+  100% {
+    background-color: #cf2027;
+  }
+}
+
+.highScore {
+  animation-name: pulse;
+  animation-duration: 5500ms;
+  animation-iteration-count: infinite;
+  border-bottom: 20px solid #fffa6d;
+}
+
+@media only screen and (max-width: 768px) {
+  .scoreHeaderAdd {
+    justify-content: flex-start;
+  }
+  .addPlayerIcon {
+    margin-left: 25px;
+  }
+  #resetScore {
+    width: 40px;
+  }
+  #resetScore img {
+    height: 60%;
+    width: auto;
+    margin: 0;
+  }
+  #resetScore p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .scoreHeaderAdd {
+    height: 75px;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .addPlayerIcon {
+    height: 25px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #addPlayerValue {
+    width: 100px;
+    margin: auto 10px;
+    padding: 3px;
+    font-size: 12pt;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 8pt;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #addPlayerButton {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #resetScore {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    right: 15px;
+  }
+  
+  .scoreHeaderStandings {
+    margin-top: 100px;
+    height: auto;
+    align-items: flex-start;
+  }
+  .scoreHeaderStandings ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .scoreHeaderStandings ul li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #scoreBox {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .playerBox {
+    margin: 0;
+    padding: 15px 20px 10px 20px;
+    border-radius: 0;
+    box-shadow: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .deleteButton {
+    border-radius: 0 0 0 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .scoreAddButton {
+    width: 35px;
+    height: 32px;
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .scoreTotals h1 {
+    font-size: 40pt;
+  }
+}
+  
+
