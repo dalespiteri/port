@@ -8,6 +8,14 @@ body {
   font-family: 'exo', sans-serif;
 }
 
+h1 {
+  font-size: 30pt;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #FAF5ED;
+}
+
 .scoreHeaderAdd {
   position: fixed;
   width: 100%;
@@ -164,14 +172,6 @@ body {
   flex-wrap: wrap;
 }
 
-h1 {
-  font-size: 30pt;
-  text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 20px;
-  color: #FAF5ED;
-}
-
 @keyframes slideIn {
   from {
     top: 50px;
@@ -269,6 +269,21 @@ h1 {
   transform: translateY(3px);
 }
 
+.addScoreDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addScoreDiv h1 {
+  font-size: 44pt;
+  margin-bottom: 0;
+  margin-right: 20px;
+  position: relative;
+  bottom: 5px;
+}
+
 .scoreAddTotalButton {
   width: 100%;
   height: 45px;
@@ -286,10 +301,10 @@ h1 {
   color: #D33534;
 }
 
-.scoreTotals {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.totalScore {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 60pt;
 }
 
 @keyframes scoreSpin {
@@ -308,11 +323,6 @@ h1 {
   animation-name: scoreSpin;
   animation-iteration-count: 1;
   animation-duration: 500ms;
-}
-
-.scoreTotals h1 {
-  font-size: 50pt;
-  margin-bottom: 0;
 }
 
 @keyframes pulse {
@@ -419,6 +429,7 @@ h1 {
 @media only screen and (max-width: 500px) {
   .playerBox {
     margin: 0;
+    margin-bottom: 15px;
     padding: 15px 20px 10px 20px;
     border-radius: 0;
     box-shadow: 0;

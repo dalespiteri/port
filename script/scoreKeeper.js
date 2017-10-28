@@ -234,17 +234,17 @@ var view = {
       createScoreAdd10.className = "scoreAddButton"
       createScoreAdd10.textContent = "+10";
       
-      getPlayerBox.appendChild(createScoreAddTotalButton);
-      createScoreAddTotalButton.className = "scoreAddTotalButton";
-      createScoreAddTotalButton.textContent = "add score";
-      
       getPlayerBox.appendChild(createScoreTotalsDiv);
       createScoreTotalsDiv.id = 'scoreTotalsDiv' + i;
-      createScoreTotalsDiv.className = "scoreTotals"
+      createScoreTotalsDiv.className = "addScoreDiv"
       var getScoreTotalsDiv = document.getElementById('scoreTotalsDiv' + i);
       
       getScoreTotalsDiv.appendChild(createScoreAddTotal);
       createScoreAddTotal.textContent = scoreTable.players[i].roundScore;
+      
+      getScoreTotalsDiv.appendChild(createScoreAddTotalButton);
+      createScoreAddTotalButton.className = "scoreAddTotalButton";
+      createScoreAddTotalButton.textContent = "add score";
       
 //      for (n = 0; n < scoreTable.players[i].score.length; n++) {
 //        var createPlayerScoreUl = document.createElement("ul"),
@@ -257,7 +257,8 @@ var view = {
 //        getPlayerScoreUl.insertBefore(createPlayerScoreLi, getPlayerScoreUl.childNodes[0]);
 //      }
       
-      getScoreTotalsDiv.appendChild(createScoreTotal);
+      getPlayerBox.appendChild(createScoreTotal);
+      createScoreTotal.className = "totalScore";
       createScoreTotal.textContent = scoreTable.players[i].totalScore;
       
       var highScore = scoreTable.highScore();
@@ -311,8 +312,8 @@ var view = {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += 10;
         
       } else if (event.target.className === 'scoreAddTotalButton') {
-        scoreTable.addScore(parseInt(event.target.parentNode.id), scoreTable.players[parseInt(event.target.parentNode.id)].roundScore);
-        scoreTable.players[parseInt(event.target.parentNode.id)].roundScore = 0;
+        scoreTable.addScore(parseInt(event.target.parentNode.parentNode.id), scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore);
+        scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore = 0;
       }
       
     view.displayPlayer();
