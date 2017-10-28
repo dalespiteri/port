@@ -186,6 +186,7 @@ var view = {
         createScoreAddTotalButton = document.createElement("button"),
         createScoreTotalsDiv = document.createElement("div"),
         createScoreAddTotal = document.createElement("h1"),
+        createScoreInput = document.createElement("input"),
         createScoreTotal = document.createElement("h1");
       
       scoreBox.appendChild(createPlayerBox);
@@ -257,6 +258,12 @@ var view = {
 //        getPlayerScoreUl.insertBefore(createPlayerScoreLi, getPlayerScoreUl.childNodes[0]);
 //      }
       
+      getPlayerBox.appendChild(createScoreInput);
+      createScoreInput.className = "scoreInput";
+      createScoreInput.id = "scoreInput" + i;
+      createScoreInput.setAttribute("type", "number");
+      createScoreInput.setAttribute("placeholder", "manual score input");
+      
       getPlayerBox.appendChild(createScoreTotal);
       createScoreTotal.className = "totalScore";
       createScoreTotal.textContent = scoreTable.players[i].totalScore;
@@ -287,39 +294,52 @@ var view = {
     getScoreBox.addEventListener ('click', function (event) {
       
       if (event.target.className === 'deleteButton') {
-        debugger;
+        
         handlers.removePlayer(parseInt(event.target.parentNode.id));
         
       } else if (event.target.id === 'scoreMinus10') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += -10;
+        view.displayPlayer();
         
       } else if (event.target.id === 'scoreMinus5') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += -5;
+        view.displayPlayer();
         
       } else if (event.target.id === 'scoreMinus1') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += -1;
+        view.displayPlayer();
         
       } else if (event.target.id === 'score0') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore = 0;
+        view.displayPlayer();
         
       } else if (event.target.id === 'scoreAdd1') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += 1;
+        view.displayPlayer();
         
       } else if (event.target.id === 'scoreAdd5') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += 5;
+        view.displayPlayer();
         
       } else if (event.target.id === 'scoreAdd10') {
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore += 10;
+        view.displayPlayer();
         
       } else if (event.target.className === 'scoreAddTotalButton') {
         scoreTable.addScore(parseInt(event.target.parentNode.parentNode.id), scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore);
         scoreTable.players[parseInt(event.target.parentNode.parentNode.id)].roundScore = 0;
+        view.displayPlayer();
       }
-      
-    view.displayPlayer();
       
     });
     
+    getScoreBox.addEventListener('keypress', function (event) {
+      
+      if (event.target.className === 'scoreInput' && event.keyCode === 13) {
+        scoreTable.addScore(parseInt(event.target.parentNode.id), event.target.valueAsNumber);
+      }
+    });
+
   }
   
 };
