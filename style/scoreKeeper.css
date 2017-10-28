@@ -225,6 +225,7 @@ h1 {
   opacity: 0.5;
   transition: all 200ms;
   border-radius: 0 10px;
+  cursor: pointer;
 }
 
 .deleteButton img {
@@ -257,16 +258,17 @@ h1 {
   color: #FAF5ED;
   transition: transform 100ms;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .scoreAddButton:hover {
   background-color: #FAF5ED;
   color: #cf2027;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .scoreAddButton:active {
-  transform: translateY(3px);
+  transform: translateY(0px);
 }
 
 .addScoreDiv {
@@ -294,6 +296,7 @@ h1 {
   font-size: 20pt;
   margin-bottom: 15px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .scoreAddTotalButton:hover {
