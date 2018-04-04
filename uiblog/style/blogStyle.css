@@ -16,6 +16,35 @@ a {
   color: inherit;
 }
 
+/* content display box */
+
+@keyframes slideUp {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.pictureDisplay {
+  position: fixed;
+  z-index: 100;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 5px solid white;
+  box-shadow: 2px 2px 0 var(--shadow);
+  visibility: hidden;
+}
+
+.pictureDisplay img {
+  width: 100%;
+  display: block;
+}
+
+.pictureDisplayToggle {
+  visibility: visible;
+  animation: slideUp 250ms 1 forwards;
+}
+
 /* header */
 
 .header {
@@ -69,6 +98,8 @@ a {
 
 .blogDescription {
   width: 425px;
+  max-width: 90%;
+  padding: 0 40px;
   height: 170px;
   margin: auto;
   background-color: var(--blue);
@@ -114,6 +145,7 @@ a {
 .scrolledHeader .faceLogo {
   width: 65px;
   height: 65px;
+  border-width: 3px;
   border-radius: 20px;
   margin: 0;
 }
@@ -172,6 +204,10 @@ a {
   border-radius: 20px;
   box-shadow: 0 10px 20px var(--shadow);
   display: flex;
+}
+
+.blogItem:last-child {
+  margin-bottom: 200px;
 }
 
 .blogThumb {
@@ -244,9 +280,89 @@ a {
 .blogCopy p {
   font-size: 16px;
   margin-bottom: 10px;
-  line-height: 24px;
+  line-height: 1.5em;
+}
+
+.blogCopy p:last-child {
+  margin-bottom: 0;
 }
 
 .challenge {
   opacity: 0.75;
+}
+
+@media screen and (max-width: 800px) {
+
+  .headerLinks {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  .headerLinks li {
+    padding: 0 10px;
+  }
+
+  .blogDescription img {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .blogDescription p {
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 24px;
+  }
+
+  .scrolledHeader {
+    height: 80px;
+  }
+
+  .scrolledHeader .faceLogo {
+    display: none;
+  }
+
+  .scrolledHeader .headerLinks {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+  }
+
+  .scrolledHeader .blogDescription {
+    display: none;
+  }
+
+  .blogList {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .blogDate {
+    margin-right: 20px;
+  }
+
+  .blogItem {
+    border-radius: 0;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+  .blogThumb {
+    height: 150px;
+    width: 100%;
+    border-radius: 0;
+    background-position: center;
+  }
+  .blogCopy {
+    width: 100%;
+    padding: 24px 12px;
+  }
+  .blogItem:last-child {
+    margin-bottom: 100px;
+  }
 }
