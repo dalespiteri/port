@@ -220,7 +220,7 @@ a {
 }
 
 .thumb005 {
-  background-image: url("../images/blogThumbs/dailyui005.png");
+  background-image: url("../images/blogThumbs/dailyui005.jpg");
   background-position: left;
 }
 
@@ -250,6 +250,11 @@ a {
 .thumb011 {
   background-image: url("../images/blogThumbs/dailyui011.jpg");
   background-position: left;
+}
+
+.thumb012 {
+  background-image: url("../images/blogThumbs/dailyui012.jpg");
+  background-position: right;
 }
 
 .blogCopy {
