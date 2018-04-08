@@ -257,6 +257,10 @@ a {
   background-position: right;
 }
 
+.thumb013 {
+  background-image: url("../images/blogThumbs/dailyui013.jpg");
+}
+
 .blogCopy {
   width: 67.5%;
   padding: 30px 60px;
